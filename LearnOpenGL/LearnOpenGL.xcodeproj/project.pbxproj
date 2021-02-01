@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		67BFEECB25C842CA00A11686 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67BFEECA25C842CA00A11686 /* main.cpp */; };
+		67BFEEEA25C8478600A11686 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
+		67BFEEEC25C8478E00A11686 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEEB25C8478E00A11686 /* Cocoa.framework */; };
+		67BFEEEE25C8479400A11686 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEED25C8479400A11686 /* IOKit.framework */; };
+		67BFEEF025C8479B00A11686 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEEF25C8479B00A11686 /* CoreVideo.framework */; };
+		67BFEF0125C8574100A11686 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; };
+		67BFEF0325C8574D00A11686 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,14 @@
 /* Begin PBXFileReference section */
 		67BFEEC725C842CA00A11686 /* Learn */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Learn; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BFEECA25C842CA00A11686 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		67BFEEE925C8478600A11686 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		67BFEEEB25C8478E00A11686 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		67BFEEED25C8479400A11686 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		67BFEEEF25C8479B00A11686 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		67BFEEFB25C856AA00A11686 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		67BFEEFD25C856C600A11686 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../../usr/local/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67BFEF0325C8574D00A11686 /* libGLEW.2.2.0.dylib in Frameworks */,
+				67BFEF0125C8574100A11686 /* libglfw.3.3.dylib in Frameworks */,
+				67BFEEF025C8479B00A11686 /* CoreVideo.framework in Frameworks */,
+				67BFEEEE25C8479400A11686 /* IOKit.framework in Frameworks */,
+				67BFEEEC25C8478E00A11686 /* Cocoa.framework in Frameworks */,
+				67BFEEEA25C8478600A11686 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +63,7 @@
 			children = (
 				67BFEEC925C842CA00A11686 /* Learn */,
 				67BFEEC825C842CA00A11686 /* Products */,
+				67BFEEE825C8478600A11686 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +81,21 @@
 				67BFEECA25C842CA00A11686 /* main.cpp */,
 			);
 			path = Learn;
+			sourceTree = "<group>";
+		};
+		67BFEEE825C8478600A11686 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */,
+				67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */,
+				67BFEEFD25C856C600A11686 /* libGLEW.2.2.0.dylib */,
+				67BFEEFB25C856AA00A11686 /* libglfw.3.3.dylib */,
+				67BFEEEF25C8479B00A11686 /* CoreVideo.framework */,
+				67BFEEED25C8479400A11686 /* IOKit.framework */,
+				67BFEEEB25C8478E00A11686 /* Cocoa.framework */,
+				67BFEEE925C8478600A11686 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,12 +164,14 @@
 		67BFEEC125C8426500A11686 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 			};
 			name = Debug;
 		};
 		67BFEEC225C8426500A11686 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 			};
 			name = Release;
 		};
@@ -141,6 +179,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -191,8 +230,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../lib/glfw-3.3.2.bin.MACOS/include\"";
-				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../glfw/3.3.2/include\"",
+					"\"$(SRCROOT)/../glew/2.2.0_1/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../glew/2.2.0_1/lib\"",
+					"\"$(SRCROOT)/../glfw/3.3.2/lib\"",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -206,6 +251,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -250,8 +296,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../lib/glfw-3.3.2.bin.MACOS/include\"";
-				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../glfw/3.3.2/include\"",
+					"\"$(SRCROOT)/../glew/2.2.0_1/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../glew/2.2.0_1/lib\"",
+					"\"$(SRCROOT)/../glfw/3.3.2/lib\"",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
