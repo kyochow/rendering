@@ -81,8 +81,8 @@
 		67BFEEBC25C8426500A11686 = {
 			isa = PBXGroup;
 			children = (
-				67BFEEC925C842CA00A11686 /* HelloWorld */,
-				67BFEF1125C8EA7800A11686 /* Triangle */,
+				67BFEEC925C842CA00A11686 /* 1_HelloWorld */,
+				67BFEF1125C8EA7800A11686 /* 2_Triangle */,
 				67BFEEC825C842CA00A11686 /* Products */,
 				67BFEEE825C8478600A11686 /* Frameworks */,
 			);
@@ -97,13 +97,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		67BFEEC925C842CA00A11686 /* HelloWorld */ = {
+		67BFEEC925C842CA00A11686 /* 1_HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
 				67BFEECA25C842CA00A11686 /* main.cpp */,
 				67BFEF1925C8F57100A11686 /* readme.md */,
 			);
-			path = HelloWorld;
+			path = 1_HelloWorld;
 			sourceTree = "<group>";
 		};
 		67BFEEE825C8478600A11686 /* Frameworks */ = {
@@ -121,12 +121,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		67BFEF1125C8EA7800A11686 /* Triangle */ = {
+		67BFEF1125C8EA7800A11686 /* 2_Triangle */ = {
 			isa = PBXGroup;
 			children = (
 				67BFEF1225C8EA7800A11686 /* main.cpp */,
 			);
-			path = Triangle;
+			path = 2_Triangle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
