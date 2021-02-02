@@ -30,8 +30,9 @@ int main(int argc, const char * argv[]) {
         //清空屏幕的颜色缓冲区
         glClear(GL_COLOR_BUFFER_BIT);
         
-        // 检查并调用事件，交换缓冲
+        // 检查并调用事件
         glfwPollEvents();
+        // 交换缓冲（基于双缓冲机制）
         glfwSwapBuffers(win);
     }
     
