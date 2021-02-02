@@ -1,5 +1,5 @@
 # rendering
-all my demo project of rendering
+all my project of rendering for learn
 
 
 #### LearnOpenGL  - Projects of XCode
