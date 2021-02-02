@@ -25,8 +25,9 @@ int main(int argc, const char * argv[]) {
     
     //保持窗口打开状态
     while(!glfwWindowShouldClose(win)){
-        //设置一个颜色
+        //使用一个自定义的颜色清空屏幕
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
+        //清空屏幕的颜色缓冲区
         glClear(GL_COLOR_BUFFER_BIT);
         
         // 检查并调用事件，交换缓冲
