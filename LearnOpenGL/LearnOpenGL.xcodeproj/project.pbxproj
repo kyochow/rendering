@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673F9DC925C990F20055C61D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
+		673F9DCA25C990FD0055C61D /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; };
+		673F9DCB25C990FD0055C61D /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		673F9DCE25C991090055C61D /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; };
+		673F9DCF25C991090055C61D /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		67AF8C0F25C98744006868F5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
 		67BFEECB25C842CA00A11686 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67BFEECA25C842CA00A11686 /* main.cpp */; };
 		67BFEF0125C8574100A11686 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; };
@@ -15,6 +20,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		673F9DCC25C990FD0055C61D /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				673F9DCF25C991090055C61D /* libglfw.3.3.dylib in Embed Libraries */,
+				673F9DCB25C990FD0055C61D /* libGLEW.2.2.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		67BFEEC525C842CA00A11686 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673F9DCE25C991090055C61D /* libglfw.3.3.dylib in Frameworks */,
+				673F9DC925C990F20055C61D /* OpenGL.framework in Frameworks */,
+				673F9DCA25C990FD0055C61D /* libGLEW.2.2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +174,7 @@
 				67BFEF0C25C8EA7800A11686 /* Sources */,
 				67BFEF0D25C8EA7800A11686 /* Frameworks */,
 				67BFEF0E25C8EA7800A11686 /* CopyFiles */,
+				673F9DCC25C990FD0055C61D /* Embed Libraries */,
 			);
 			buildRules = (
 			);
