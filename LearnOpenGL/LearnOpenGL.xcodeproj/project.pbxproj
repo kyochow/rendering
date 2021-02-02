@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67AF8C0F25C98744006868F5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
 		67BFEECB25C842CA00A11686 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67BFEECA25C842CA00A11686 /* main.cpp */; };
-		67BFEEEA25C8478600A11686 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
-		67BFEEEC25C8478E00A11686 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEEB25C8478E00A11686 /* Cocoa.framework */; };
-		67BFEEEE25C8479400A11686 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEED25C8479400A11686 /* IOKit.framework */; };
-		67BFEEF025C8479B00A11686 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEEF25C8479B00A11686 /* CoreVideo.framework */; };
 		67BFEF0125C8574100A11686 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; };
 		67BFEF0325C8574D00A11686 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; };
 		67BFEF1325C8EA7800A11686 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67BFEF1225C8EA7800A11686 /* main.cpp */; };
@@ -61,10 +58,7 @@
 			files = (
 				67BFEF0325C8574D00A11686 /* libGLEW.2.2.0.dylib in Frameworks */,
 				67BFEF0125C8574100A11686 /* libglfw.3.3.dylib in Frameworks */,
-				67BFEEF025C8479B00A11686 /* CoreVideo.framework in Frameworks */,
-				67BFEEEE25C8479400A11686 /* IOKit.framework in Frameworks */,
-				67BFEEEC25C8478E00A11686 /* Cocoa.framework in Frameworks */,
-				67BFEEEA25C8478600A11686 /* OpenGL.framework in Frameworks */,
+				67AF8C0F25C98744006868F5 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
