@@ -36,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		673F9DC525C98EAB0055C61D /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		673F9DC625C98F9E0055C61D /* pipeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipeline.png; sourceTree = "<group>"; };
 		67BFEEC725C842CA00A11686 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BFEECA25C842CA00A11686 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		67BFEEE925C8478600A11686 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -118,6 +120,8 @@
 		67BFEF1125C8EA7800A11686 /* 2_Triangle */ = {
 			isa = PBXGroup;
 			children = (
+				673F9DC625C98F9E0055C61D /* pipeline.png */,
+				673F9DC525C98EAB0055C61D /* readme.md */,
 				67BFEF1225C8EA7800A11686 /* main.cpp */,
 			);
 			path = 2_Triangle;
