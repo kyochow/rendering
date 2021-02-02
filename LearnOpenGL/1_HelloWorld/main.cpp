@@ -29,7 +29,6 @@ int main(int argc, const char * argv[]) {
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         //清空屏幕的颜色缓冲区
         glClear(GL_COLOR_BUFFER_BIT);
-        
         // 检查并调用事件
         glfwPollEvents();
         // 交换缓冲（基于双缓冲机制）
