@@ -145,7 +145,7 @@
 			dependencies = (
 			);
 			name = HelloWorld;
-			productName = Learn;
+			productName = HelloWorld;
 			productReference = 67BFEEC725C842CA00A11686 /* HelloWorld */;
 			productType = "com.apple.product-type.tool";
 		};
