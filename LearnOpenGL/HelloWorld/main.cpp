@@ -2,28 +2,12 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-void Render(void)
-{
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-    glBegin(GL_TRIANGLES);
-    {
-        glColor3f(1.0,0.0,0.0);
-        glVertex2f(0, .5);
-        glColor3f(0.0,1.0,0.0);
-        glVertex2f(-.5,-.5);
-        glColor3f(0.0, 0.0, 1.0);
-        glVertex2f(.5, -.5);
-    }
-    glEnd();
-}
-
 int main(int argc, const char * argv[]) {
     GLFWwindow* win;
     if(!glfwInit()){
         return -1;
     }
-    win = glfwCreateWindow(640, 480, "OpenGL Base Project", NULL, NULL);
+    win = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
     if(!win)
     {
         glfwTerminate();
@@ -35,8 +19,6 @@ int main(int argc, const char * argv[]) {
     }
     glfwMakeContextCurrent(win);
     while(!glfwWindowShouldClose(win)){
-        Render();
-        glfwSwapBuffers(win);
         glfwPollEvents();
     }
     glfwTerminate();
