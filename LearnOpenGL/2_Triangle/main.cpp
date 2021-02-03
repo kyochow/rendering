@@ -23,7 +23,6 @@ const char *fragmentShaderSource = "#version 330 core\n"
 
 unsigned int shaderProgram;
 
-
 void compileShader(){
     //编译上面的顶点着色器
     unsigned int vertexShader;
