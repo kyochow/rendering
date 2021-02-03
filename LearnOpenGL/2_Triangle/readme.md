@@ -7,7 +7,7 @@
 
 在OpenGL中，任何事物都在3D空间中，而屏幕和窗口却是2D像素数组，这导致OpenGL的大部分工作都是关于把3D坐标转变为适应你屏幕的2D像素
 
-![Image text]()
+![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/2_Triangle/pipeline.png)
 
 图形渲染管线可以被划分为两个主要部分：
 - 第一部分把你的3D坐标转换为2D坐标
@@ -20,6 +20,8 @@
 VBO是从CPU传递过来的，只是一个一维数组
 
 需要绑定为VAO
+
+![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/2_Triangle/vertex_attribute_pointer.png)
 
 
 //参数含义
