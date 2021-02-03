@@ -97,6 +97,7 @@
 		672FCAB425CAE9E9002DCADF /* Triangle_EBO */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Triangle_EBO; sourceTree = BUILT_PRODUCTS_DIR; };
 		672FCAB625CAE9E9002DCADF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		672FCABF25CAEA12002DCADF /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		672FCAC225CAF00E002DCADF /* opengl_context.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opengl_context.png; sourceTree = "<group>"; };
 		673F9DC525C98EAB0055C61D /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		673F9DC625C98F9E0055C61D /* pipeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipeline.png; sourceTree = "<group>"; };
 		67BFEEC725C842CA00A11686 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +168,7 @@
 		672FCAB525CAE9E9002DCADF /* 2.1_Triangle_EBO */ = {
 			isa = PBXGroup;
 			children = (
+				672FCAC225CAF00E002DCADF /* opengl_context.png */,
 				672FCABF25CAEA12002DCADF /* readme.md */,
 				672FCAB625CAE9E9002DCADF /* main.cpp */,
 			);

@@ -42,3 +42,8 @@ VBO和VAO的生命周期由OpenGL维护
 
 另外，还可以设置一系列开关，来影响整个渲染流程
 
+
+ 整体的图如下：来自傅老师
+ 
+ ![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/2.1_Triangle_EBO/opengl_context.png)
+
