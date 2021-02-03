@@ -9,6 +9,8 @@ glEnable(GL_CULL_FACE);  //开启面剔除
 glCullFace(GL_BACK);         //剔除背面
 
 
+ VAO - VBO 示意图
+![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/2.1_Triangle_EBO/vertex_array_objects.png)
 
 
 

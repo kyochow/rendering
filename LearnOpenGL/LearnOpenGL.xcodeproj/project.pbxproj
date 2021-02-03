@@ -14,6 +14,11 @@
 		672FCAAC25CAE75E002DCADF /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; };
 		672FCAAD25CAE75E002DCADF /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		672FCAB725CAE9E9002DCADF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 672FCAB625CAE9E9002DCADF /* main.cpp */; };
+		672FCAC525CAF1B3002DCADF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
+		672FCAC625CAF1BD002DCADF /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; };
+		672FCAC725CAF1BD002DCADF /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		672FCACA25CAF1C6002DCADF /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; };
+		672FCACB25CAF1C6002DCADF /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		673F9DC925C990F20055C61D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
 		673F9DCA25C990FD0055C61D /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; };
 		673F9DCB25C990FD0055C61D /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -57,6 +62,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		672FCAC825CAF1BD002DCADF /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				672FCACB25CAF1C6002DCADF /* libglfw.3.3.dylib in Embed Libraries */,
+				672FCAC725CAF1BD002DCADF /* libGLEW.2.2.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		673F9DCC25C990FD0055C61D /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,6 +115,7 @@
 		672FCAB625CAE9E9002DCADF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		672FCABF25CAEA12002DCADF /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		672FCAC225CAF00E002DCADF /* opengl_context.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opengl_context.png; sourceTree = "<group>"; };
+		672FCACD25CAF29D002DCADF /* vertex_array_objects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vertex_array_objects.png; sourceTree = "<group>"; };
 		673F9DC525C98EAB0055C61D /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		673F9DC625C98F9E0055C61D /* pipeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipeline.png; sourceTree = "<group>"; };
 		67BFEEC725C842CA00A11686 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +148,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672FCACA25CAF1C6002DCADF /* libglfw.3.3.dylib in Frameworks */,
+				672FCAC525CAF1B3002DCADF /* OpenGL.framework in Frameworks */,
+				672FCAC625CAF1BD002DCADF /* libGLEW.2.2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +189,7 @@
 		672FCAB525CAE9E9002DCADF /* 2.1_Triangle_EBO */ = {
 			isa = PBXGroup;
 			children = (
+				672FCACD25CAF29D002DCADF /* vertex_array_objects.png */,
 				672FCAC225CAF00E002DCADF /* opengl_context.png */,
 				672FCABF25CAEA12002DCADF /* readme.md */,
 				672FCAB625CAE9E9002DCADF /* main.cpp */,
@@ -261,6 +283,7 @@
 				672FCAB025CAE9E9002DCADF /* Sources */,
 				672FCAB125CAE9E9002DCADF /* Frameworks */,
 				672FCAB225CAE9E9002DCADF /* CopyFiles */,
+				672FCAC825CAF1BD002DCADF /* Embed Libraries */,
 			);
 			buildRules = (
 			);

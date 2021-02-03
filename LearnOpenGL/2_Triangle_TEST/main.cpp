@@ -24,7 +24,7 @@ const char *fragmentShaderSource = "#version 330 core\n"
     "{\n"
     "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
     "}\n\0";
-unsigned int VAO;
+
 unsigned int shaderProgram;
 
 void compileShader(){
@@ -40,12 +40,6 @@ void compileShader(){
     glAttachShader(shaderProgram, vertexShader);
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
-}
-
-void Render(){
-    glUseProgram(shaderProgram);
-    glBindVertexArray(VAO);
-    glDrawArrays(GL_TRIANGLES, 0, 6); //这里和之前不同的，就是需要6个点
 }
 
 int main(int argc, const char * argv[]) {
@@ -77,7 +71,7 @@ int main(int argc, const char * argv[]) {
     
     compileShader();
     
-    
+    unsigned int VAO;
     glGenVertexArrays(1,&VAO);
     
     unsigned int VBO;
@@ -94,7 +88,9 @@ int main(int argc, const char * argv[]) {
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
-        Render();
+        glUseProgram(shaderProgram);
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 6); //这里和之前不同的，就是需要6个点
         
         glfwSwapBuffers(win);
         glfwPollEvents();
