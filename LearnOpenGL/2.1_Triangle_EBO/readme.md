@@ -2,15 +2,15 @@
 
 
 
-Tip 1 : gl里剔除背面
+**Tip 1 : gl里剔除背面**
 
-glEnable(GL_CULL_FACE);  //开启面剔除
+`glEnable(GL_CULL_FACE);  //开启面剔除`
 
-glCullFace(GL_BACK);         //剔除背面
+`glCullFace(GL_BACK);         //剔除背面`
 
  
 
-Tip 2 : 不同的VAO 对不同的 VBO，会使用不同的寄存器，读取方式也各不相同
+**Tip 2 : 不同的VAO 对不同的 VBO，会使用不同的寄存器，读取方式也各不相同**
 
 ![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/2.1_Triangle_EBO/vertex_array_objects.png)
 
