@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2F49C1AC-D32A-4050-8AD9-70EA798F5B9E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E16B383-26E6-44D8-ABE8-16637A30EBAB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "3.1_Shader/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "compileShader()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A6C57BA-D629-465D-946D-D4AC792465A2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "3.1_Shader/Shader.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "Shader::Shader(vertexPath, fragmentPath)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5A6C57BA-D629-465D-946D-D4AC792465A2 - b4c7f8da054475b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Shader::Shader(char const*, char const*)"
+                  moduleName = "Shader"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.1_Shader/Shader.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "615">
+               </Location>
+               <Location
+                  uuid = "5A6C57BA-D629-465D-946D-D4AC792465A2 - b4c7f8da054475b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Shader::Shader(char const*, char const*)"
+                  moduleName = "Shader"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.1_Shader/Shader.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "669">
+               </Location>
+               <Location
+                  uuid = "5A6C57BA-D629-465D-946D-D4AC792465A2 - b4c7f8da054475b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Shader::Shader(char const*, char const*)"
+                  moduleName = "Shader"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.1_Shader/Shader.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "944">
+               </Location>
+               <Location
+                  uuid = "5A6C57BA-D629-465D-946D-D4AC792465A2 - b4c7f8da054475b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Shader::Shader(char const*, char const*)"
+                  moduleName = "Shader"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.1_Shader/Shader.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A337E8B5-4892-48D1-931C-423F752AA765"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "3.1_Shader/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "compileShader()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
