@@ -177,13 +177,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		672FCA9D25CAE6D0002DCADF /* 2.1.1_Triangle_TEST */ = {
+		672FCA9D25CAE6D0002DCADF /* 2.1_Triangle_TEST */ = {
 			isa = PBXGroup;
 			children = (
 				672FCA9E25CAE6D0002DCADF /* main.cpp */,
 				672FCAAF25CAE899002DCADF /* readme.md */,
 			);
-			path = 2.1.1_Triangle_TEST;
+			path = 2.1_Triangle_TEST;
 			sourceTree = "<group>";
 		};
 		672FCAB525CAE9E9002DCADF /* 2.2_Triangle_EBO */ = {
@@ -202,7 +202,7 @@
 			children = (
 				67BFEEC925C842CA00A11686 /* 1_HelloWorld */,
 				67BFEF1125C8EA7800A11686 /* 2.1_Triangle */,
-				672FCA9D25CAE6D0002DCADF /* 2.1.1_Triangle_TEST */,
+				672FCA9D25CAE6D0002DCADF /* 2.1_Triangle_TEST */,
 				672FCAB525CAE9E9002DCADF /* 2.2_Triangle_EBO */,
 				67BFEEC825C842CA00A11686 /* Products */,
 				67BFEEE825C8478600A11686 /* Frameworks */,
