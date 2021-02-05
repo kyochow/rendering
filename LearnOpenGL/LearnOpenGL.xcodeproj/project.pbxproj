@@ -249,15 +249,23 @@
 				678A96D925CC352E006321A0 /* main.cpp */,
 				678A96E925CC35BC006321A0 /* readme.md */,
 				678A96EB25CC396E006321A0 /* vertex.shader */,
+			);
+			path = 3.1_Shader;
+			sourceTree = "<group>";
+		};
+		678A970825CD6AE9006321A0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
 				678A96FA25CC3D6D006321A0 /* Shader.cpp */,
 				678A96FB25CC3D6D006321A0 /* Shader.h */,
 			);
-			path = 3.1_Shader;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		67BFEEBC25C8426500A11686 = {
 			isa = PBXGroup;
 			children = (
+				678A970825CD6AE9006321A0 /* Common */,
 				67BFEEC925C842CA00A11686 /* 1_HelloWorld */,
 				67BFEF1125C8EA7800A11686 /* 2.1_Triangle */,
 				672FCA9D25CAE6D0002DCADF /* 2.1_Triangle_TEST */,

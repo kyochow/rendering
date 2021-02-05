@@ -17,27 +17,6 @@ unsigned int indices[] = {
     2,1,3
 };
 
-unsigned int shaderProgram;
-
-void compileShader(){
-    
-    Shader s = Shader("/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.1_Shader/vertex.shader","/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.1_Shader/fragment.shader");
-    
-    unsigned int vertexShader;
-    vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &s.vShaderCode, NULL);
-    glCompileShader(vertexShader);
-    unsigned int fragmentShader;
-    fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &s.fShaderCode, NULL);
-    glCompileShader(fragmentShader);
-    shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-}
-
-
 int main(int argc, const char * argv[]) {
     std::cout << "start \n" << std::endl;
     glfwInit();
@@ -65,7 +44,8 @@ int main(int argc, const char * argv[]) {
     
     glViewport(0, 0, 800, 600);
     
-    compileShader();
+    Shader s = Shader("/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.1_Shader/vertex.shader","/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.1_Shader/fragment.shader");
+    
     
     unsigned int VAO;
     glGenVertexArrays(1,&VAO);
@@ -90,7 +70,7 @@ int main(int argc, const char * argv[]) {
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
-        glUseProgram(shaderProgram);
+        s.use();
         glBindVertexArray(VAO);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);
         
