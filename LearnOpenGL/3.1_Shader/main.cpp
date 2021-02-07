@@ -9,12 +9,11 @@ float vertices[] = {
     -0.5f, -0.5f, 0.0f,  // 0
      0.5f, -0.5f, 0.0f,  // 1
      0.0f,  0.5f, 0.0f,  // 2
-     0.5f,  0.8f, 0.0f,  // 3
+
 };
 //EBO Data
 unsigned int indices[] = {
-    0,1,2,
-    2,1,3
+    0,1,2
 };
 
 int main(int argc, const char * argv[]) {
@@ -75,7 +74,7 @@ int main(int argc, const char * argv[]) {
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);
         
         //这里是和之前不同的，
-        glDrawElements(GL_TRIANGLES, 6,GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, 3,GL_UNSIGNED_INT, 0);
         //glDrawArrays(GL_TRIANGLES, 0, 6);
         glfwSwapBuffers(win);
         glfwPollEvents();
