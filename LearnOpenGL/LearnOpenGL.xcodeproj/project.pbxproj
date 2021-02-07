@@ -245,10 +245,10 @@
 		678A96D825CC352E006321A0 /* 3.1_Shader */ = {
 			isa = PBXGroup;
 			children = (
+				678A96EB25CC396E006321A0 /* vertex.shader */,
 				678A96EC25CC398C006321A0 /* fragment.shader */,
 				678A96D925CC352E006321A0 /* main.cpp */,
 				678A96E925CC35BC006321A0 /* readme.md */,
-				678A96EB25CC396E006321A0 /* vertex.shader */,
 			);
 			path = 3.1_Shader;
 			sourceTree = "<group>";
