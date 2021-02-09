@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
     
     glViewport(0, 0, 800, 600);
     
-    Shader s = Shader("/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.2_Shader/vertex.shader","/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.2_Shader/fragment.shader");
+    Shader shader = Shader("/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.2_Shader/vertex.shader","/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.2_Shader/fragment.shader");
     
     
     unsigned int VAO;
@@ -64,12 +64,11 @@ int main(int argc, const char * argv[]) {
     
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+    shader.use();
     
     while(!glfwWindowShouldClose(win)){
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        
-        s.use();
         
         float timeValue = glfwGetTime();
         float redValue = (sin(timeValue)/2.0f)+0.5f;

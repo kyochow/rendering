@@ -42,7 +42,7 @@ int main(int argc, const char * argv[]) {
     
     glViewport(0, 0, 800, 600);
     
-    Shader s = Shader("/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.3_Shader/vertex.shader","/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.3_Shader/fragment.shader");
+    Shader shader = Shader("/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.3_Shader/vertex.shader","/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.3_Shader/fragment.shader");
     
     
     unsigned int VAO;
@@ -67,15 +67,16 @@ int main(int argc, const char * argv[]) {
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
     
+    shader.use();
+    
     while(!glfwWindowShouldClose(win)){
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        
-        s.use();
-        
+
         glBindVertexArray(VAO);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);
         glDrawElements(GL_TRIANGLES, 3,GL_UNSIGNED_INT, 0);
+        
         glfwSwapBuffers(win);
         glfwPollEvents();
     }

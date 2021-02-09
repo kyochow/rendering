@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
     glViewport(0, 0, 800, 600);
     
     
-    const char* folderPath = "4.1_Texture/";
+    const char* folderPath = "4.2_Texture/";
     
     const char* vertexName = "vertex.shader";
     char vertexFullPath[1024];
@@ -67,15 +67,11 @@ int main(int argc, const char * argv[]) {
     glEnableVertexAttribArray(2);
     
     
-    //申请贴图
-    unsigned int texture;
-    glGenTextures(1, &texture);
-    glBindTexture(GL_TEXTURE_2D, texture);//绑定
-    // 为当前绑定的纹理对象设置环绕、过滤方式
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    //申请贴图 第一张
+    unsigned int textureA;
+    glGenTextures(1, &textureA);
+    glBindTexture(GL_TEXTURE_2D, textureA);//绑定
+
     
     char imgPath[1024];
     sprintf(imgPath, "%s%s", PROJECT_ROOT,"Arts/container.jpg");
@@ -96,15 +92,52 @@ int main(int argc, const char * argv[]) {
     }
     stbi_image_free(data);
     
+    //第二张贴图 ----------------------
+    unsigned int textureB;
+    glGenTextures(1, &textureB);
+    glBindTexture(GL_TEXTURE_2D, textureB);//绑定
+    
+    char imgPath2[1024];
+    sprintf(imgPath2, "%s%s", PROJECT_ROOT,"Arts/awesomeface.png");
+    int width2, height2, nrChannels2;
+    unsigned char *data2 = stbi_load(imgPath2, &width2, &height2, &nrChannels2, 0);
+    if (data2)
+    {
+        //第一参数 类型
+        //第二参数 mipmap等级
+        //第三参数 格式 RGB
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width2, height2, 0, GL_RGB, GL_UNSIGNED_BYTE, data2);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        std::cout << "Failed to load texture 2" << std::endl;
+    }
+    stbi_image_free(data2);
+    
     shader.use();
-    glBindTexture(GL_TEXTURE_2D, texture);
-    glBindVertexArray(VAO);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);
     
+    //多张贴图，需要先激活指定位置
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, textureA);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, textureB);
     
+    shader.setInt("texture1",0);
+    shader.setInt("texture2",1);
+    
+    // 为当前绑定的纹理对象设置环绕、过滤方式
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     while(!glfwWindowShouldClose(win)){
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
+        
+        glBindVertexArray(VAO);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);
+        
         glDrawElements(GL_TRIANGLES, 6,GL_UNSIGNED_INT, 0);
         glfwSwapBuffers(win);
         glfwPollEvents();
