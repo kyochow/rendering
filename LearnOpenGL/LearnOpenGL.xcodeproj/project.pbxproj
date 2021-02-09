@@ -290,7 +290,6 @@
 		678A97E125D26C54006321A0 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		678A97E225D26C54006321A0 /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; };
 		678A97E325D26C55006321A0 /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.shader; sourceTree = "<group>"; };
-		678A97EC25D26D57006321A0 /* awesomeface.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awesomeface.jpg; sourceTree = "<group>"; };
 		678A97F225D282D1006321A0 /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 		67BFEEC725C842CA00A11686 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BFEECA25C842CA00A11686 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -458,10 +457,10 @@
 			isa = PBXGroup;
 			children = (
 				678A97A525D12AC6006321A0 /* vertex_attribute_pointer_interleaved.png */,
-				678A979E25D114CC006321A0 /* fragment.shader */,
-				678A979F25D114CC006321A0 /* readme.md */,
 				678A97A025D114CC006321A0 /* vertex.shader */,
+				678A979E25D114CC006321A0 /* fragment.shader */,
 				678A978D25D113C8006321A0 /* main.cpp */,
+				678A979F25D114CC006321A0 /* readme.md */,
 			);
 			path = 3.3_Shader;
 			sourceTree = "<group>";
@@ -469,10 +468,10 @@
 		678A97AB25D1327D006321A0 /* 4.1_Texture */ = {
 			isa = PBXGroup;
 			children = (
-				678A97BB25D132C2006321A0 /* fragment.shader */,
-				678A97BC25D132C2006321A0 /* readme.md */,
 				678A97BD25D132C2006321A0 /* vertex.shader */,
+				678A97BB25D132C2006321A0 /* fragment.shader */,
 				678A97AC25D1327D006321A0 /* main.cpp */,
+				678A97BC25D132C2006321A0 /* readme.md */,
 			);
 			path = 4.1_Texture;
 			sourceTree = "<group>";
@@ -481,7 +480,6 @@
 			isa = PBXGroup;
 			children = (
 				678A97F225D282D1006321A0 /* awesomeface.png */,
-				678A97EC25D26D57006321A0 /* awesomeface.jpg */,
 				678A97C625D225CF006321A0 /* container.jpg */,
 				678A97C725D225CF006321A0 /* test.jpeg */,
 			);

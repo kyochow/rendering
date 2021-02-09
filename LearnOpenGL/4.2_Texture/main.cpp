@@ -24,6 +24,8 @@ unsigned int indices[] = {
 int main(int argc, const char * argv[]) {
     
     auto win = initGL();
+    //设置这个image loader库上下反转图片
+    stbi_set_flip_vertically_on_load(true);
     
     glViewport(0, 0, 800, 600);
     
@@ -106,7 +108,7 @@ int main(int argc, const char * argv[]) {
         //第一参数 类型
         //第二参数 mipmap等级
         //第三参数 格式 RGB
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width2, height2, 0, GL_RGB, GL_UNSIGNED_BYTE, data2);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width2, height2, 0, GL_RGBA, GL_UNSIGNED_BYTE, data2);
         glGenerateMipmap(GL_TEXTURE_2D);
     }
     else
@@ -114,23 +116,23 @@ int main(int argc, const char * argv[]) {
         std::cout << "Failed to load texture 2" << std::endl;
     }
     stbi_image_free(data2);
+    // 为当前绑定的纹理对象设置环绕、过滤方式
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
     shader.use();
-    
+    // either set it manually like so:
+    glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
+    // or set it via the texture class
+    shader.setInt("texture2", 1);
     //多张贴图，需要先激活指定位置
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, textureA);
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, textureB);
     
-    shader.setInt("texture1",0);
-    shader.setInt("texture2",1);
-    
-    // 为当前绑定的纹理对象设置环绕、过滤方式
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     while(!glfwWindowShouldClose(win)){
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
