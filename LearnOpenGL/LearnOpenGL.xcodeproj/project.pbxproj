@@ -253,6 +253,10 @@
 		678A97BB25D132C2006321A0 /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; };
 		678A97BC25D132C2006321A0 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		678A97BD25D132C2006321A0 /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.shader; sourceTree = "<group>"; };
+		678A97BF25D13548006321A0 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		678A97C625D225CF006321A0 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		678A97C725D225CF006321A0 /* test.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpeg; sourceTree = "<group>"; };
+		678A97CA25D2366F006321A0 /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 		67BFEEC725C842CA00A11686 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BFEECA25C842CA00A11686 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		67BFEEE925C8478600A11686 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -397,8 +401,10 @@
 		678A977F25D031A1006321A0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				678A97BF25D13548006321A0 /* stb_image.h */,
 				678A978025D031A1006321A0 /* Shader.h */,
 				678A978125D031A1006321A0 /* Shader.cpp */,
+				678A97CA25D2366F006321A0 /* define.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -426,9 +432,19 @@
 			path = 4.1_Texture;
 			sourceTree = "<group>";
 		};
+		678A97C225D136AD006321A0 /* Arts */ = {
+			isa = PBXGroup;
+			children = (
+				678A97C625D225CF006321A0 /* container.jpg */,
+				678A97C725D225CF006321A0 /* test.jpeg */,
+			);
+			path = Arts;
+			sourceTree = "<group>";
+		};
 		67BFEEBC25C8426500A11686 = {
 			isa = PBXGroup;
 			children = (
+				678A97C225D136AD006321A0 /* Arts */,
 				678A977F25D031A1006321A0 /* Common */,
 				67BFEEC925C842CA00A11686 /* 1_HelloWorld */,
 				67BFEF1125C8EA7800A11686 /* 2.1_Triangle */,
