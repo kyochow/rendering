@@ -1,6 +1,7 @@
 #include <iostream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <direct>
 
 int main(int argc, const char * argv[]) {
     GLFWwindow* win;
@@ -22,6 +23,10 @@ int main(int argc, const char * argv[]) {
         return -1;
     }
     glfwMakeContextCurrent(win);
+    
+    char buff[1000];
+    _getcwd(buff, 1000);
+    std::cout << "当前路径是："<<buff<<"\n";
     
     //保持窗口打开状态
     while(!glfwWindowShouldClose(win)){
