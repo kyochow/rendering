@@ -26,10 +26,6 @@
 		673F9DCF25C991090055C61D /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		678A96DA25CC352E006321A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678A96D925CC352E006321A0 /* main.cpp */; };
 		678A96E225CC353C006321A0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
-		678A96E325CC354E006321A0 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; };
-		678A96E425CC354E006321A0 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		678A96E625CC3559006321A0 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; };
-		678A96E725CC3559006321A0 /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 67BFEF0025C8574100A11686 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		678A971325D02862006321A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678A971225D02862006321A0 /* main.cpp */; };
 		678A972825D02B8A006321A0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
 		678A972925D02B93006321A0 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEF0225C8574D00A11686 /* libGLEW.2.2.0.dylib */; };
@@ -54,7 +50,6 @@
 		678A97B925D132A7006321A0 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678A978125D031A1006321A0 /* Shader.cpp */; };
 		678A97DB25D26C1F006321A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678A97DA25D26C1F006321A0 /* main.cpp */; };
 		678A97E425D26CAA006321A0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
-		678A97EA25D26CC8006321A0 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678A978125D031A1006321A0 /* Shader.cpp */; };
 		67AF8C0F25C98744006868F5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
 		67BFEECB25C842CA00A11686 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67BFEECA25C842CA00A11686 /* main.cpp */; };
 		67BFEF1325C8EA7800A11686 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67BFEF1225C8EA7800A11686 /* main.cpp */; };
@@ -66,6 +61,11 @@
 		E4358DA425D838F100DF2184 /* libGLEW.2.2.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = E4358D9625D835F100DF2184 /* libGLEW.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		E4358DA625D838FB00DF2184 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; };
 		E4358DA725D838FB00DF2184 /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E4358DA925D83BD700DF2184 /* libGLEW.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4358D9625D835F100DF2184 /* libGLEW.2.2.dylib */; };
+		E4358DAA25D83BD700DF2184 /* libGLEW.2.2.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = E4358D9625D835F100DF2184 /* libGLEW.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E4358DAC25D83BE500DF2184 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; };
+		E4358DAD25D83BE500DF2184 /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E4358DB025D83E3900DF2184 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678A978125D031A1006321A0 /* Shader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,18 +131,6 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
-		};
-		678A96E525CC354E006321A0 /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				678A96E725CC3559006321A0 /* libglfw.3.3.dylib in Embed Libraries */,
-				678A96E425CC354E006321A0 /* libGLEW.2.2.0.dylib in Embed Libraries */,
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		678A970E25D02862006321A0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -258,6 +246,18 @@
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4358DAB25D83BD700DF2184 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E4358DAA25D83BD700DF2184 /* libGLEW.2.2.dylib in Embed Libraries */,
+				E4358DAD25D83BE500DF2184 /* libglfw.3.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -347,9 +347,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678A96E625CC3559006321A0 /* libglfw.3.3.dylib in Frameworks */,
 				678A96E225CC353C006321A0 /* OpenGL.framework in Frameworks */,
-				678A96E325CC354E006321A0 /* libGLEW.2.2.0.dylib in Frameworks */,
+				E4358DAC25D83BE500DF2184 /* libglfw.3.dylib in Frameworks */,
+				E4358DA925D83BD700DF2184 /* libGLEW.2.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,7 +631,7 @@
 				678A96D325CC352E006321A0 /* Sources */,
 				678A96D425CC352E006321A0 /* Frameworks */,
 				678A96D525CC352E006321A0 /* CopyFiles */,
-				678A96E525CC354E006321A0 /* Embed Libraries */,
+				E4358DAB25D83BD700DF2184 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -870,7 +870,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678A97EA25D26CC8006321A0 /* Shader.cpp in Sources */,
+				E4358DB025D83E3900DF2184 /* Shader.cpp in Sources */,
 				678A97DB25D26C1F006321A0 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

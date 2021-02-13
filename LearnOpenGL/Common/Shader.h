@@ -10,11 +10,15 @@
 #include <sstream>
 #include <iostream>
 
+
+
 class Shader
 {
 public:
     Shader();
-    Shader(const char* vertexPath,const char* fragmentPath);
+    Shader(const char* folderPath);
+    Shader(const char* folderPath,const char* vertexName,const char* fragmentName);
+    void genShader(const char* vertexPath,const char* fragmentPath);
     // 使用/激活程序
     void use();
     // uniform工具函数

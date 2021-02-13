@@ -29,19 +29,7 @@ int main(int argc, const char * argv[]) {
     
     glViewport(0, 0, 800, 600);
     
-    
-    const char* folderPath = "4.2_Texture/";
-    
-    const char* vertexName = "vertex.shader";
-    char vertexFullPath[1024];
-    sprintf(vertexFullPath, "%s%s%s", PROJECT_ROOT,folderPath,vertexName);
-
-    const char* fragmentName = "fragment.shader";
-    char fragmentFullPath[1024];
-    sprintf(fragmentFullPath, "%s%s%s", PROJECT_ROOT,folderPath,fragmentName);
-    
-    Shader shader = Shader(vertexFullPath,fragmentFullPath);
-    
+    Shader shader = Shader("4.2_Texture/");
     
     unsigned int VAO;
     glGenVertexArrays(1,&VAO);

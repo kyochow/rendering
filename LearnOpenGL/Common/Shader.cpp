@@ -12,7 +12,30 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-Shader::Shader(const char* vertexPath,const char* fragmentPath)
+const char* PROJ_ROOT ="/Users/yons/Documents/github/rendering/LearnOpenGL/";
+
+
+Shader::Shader(const char* folderPath)
+{
+    const char* vertexName = "vertex.shader";
+    const char* fragmentName = "fragment.shader";
+    char vertexFullPath[1024];
+    sprintf(vertexFullPath, "%s%s%s", PROJ_ROOT,folderPath,vertexName);
+    char fragmentFullPath[1024];
+    sprintf(fragmentFullPath, "%s%s%s", PROJ_ROOT,folderPath,fragmentName);
+    genShader(vertexFullPath,fragmentFullPath);
+}
+
+Shader::Shader(const char* folderPath,const char* vertexName,const char* fragmentName)
+{
+    char vertexFullPath[1024];
+    sprintf(vertexFullPath, "%s%s%s", PROJ_ROOT,folderPath,vertexName);
+    char fragmentFullPath[1024];
+    sprintf(fragmentFullPath, "%s%s%s", PROJ_ROOT,folderPath,fragmentName);
+    genShader(vertexFullPath,fragmentFullPath);
+}
+
+void Shader::genShader(const char* vertexPath,const char* fragmentPath)
 {
     // 1. 从文件路径中获取顶点/片段着色器
     std::string vertexCode;
@@ -67,6 +90,7 @@ Shader::Shader(const char* vertexPath,const char* fragmentPath)
     glDeleteShader(vertex);
     glDeleteShader(fragment);
 }
+
 
 void Shader::use()
 {
