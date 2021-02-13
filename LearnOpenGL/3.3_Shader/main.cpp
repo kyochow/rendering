@@ -3,7 +3,7 @@
 #include <GLFW/glfw3.h>
 #include <fstream>
 #include "Shader.h"
-
+#include "define.h"
 //VBO Data
 float vertices[] = {
     -0.5f, -0.5f, 0.0f    , 1.0f, 0.0f, 0.0f,   // 右下
@@ -42,7 +42,17 @@ int main(int argc, const char * argv[]) {
     
     glViewport(0, 0, 800, 600);
     
-    Shader shader = Shader("/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.3_Shader/vertex.shader","/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL/3.3_Shader/fragment.shader");
+    const char* folderPath = "3.3_Shader/";
+    
+    const char* vertexName = "vertex.shader";
+    char vertexFullPath[1024];
+    sprintf(vertexFullPath, "%s%s%s", PROJECT_ROOT,folderPath,vertexName);
+
+    const char* fragmentName = "fragment.shader";
+    char fragmentFullPath[1024];
+    sprintf(fragmentFullPath, "%s%s%s", PROJECT_ROOT,folderPath,fragmentName);
+    
+    Shader shader = Shader(vertexFullPath,fragmentFullPath);
     
     
     unsigned int VAO;
