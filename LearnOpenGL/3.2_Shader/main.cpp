@@ -72,7 +72,7 @@ int main(int argc, const char * argv[]) {
         
         float timeValue = glfwGetTime();
         float redValue = (sin(timeValue)/2.0f)+0.5f;
-        s.setVec4("ourColor",redValue,0.0f,0.0f,0.0f);
+        shader.setVec4("ourColor",redValue,0.0f,0.0f,0.0f);
         
         glBindVertexArray(VAO);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);
