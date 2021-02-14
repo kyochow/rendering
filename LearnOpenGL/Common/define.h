@@ -1,9 +1,5 @@
 #ifndef define_h
 #define define_h
-//每个人的项目路径都各不相同
-const char* PROJECT_ROOT ="/Users/yons/Documents/github/rendering/LearnOpenGL/";
-#endif
-
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -30,3 +26,6 @@ GLFWwindow* initGL(){
     glewInit();
     return win;
 }
+
+#endif
+

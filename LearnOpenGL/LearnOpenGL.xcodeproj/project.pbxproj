@@ -272,7 +272,7 @@
 		672FCACD25CAF29D002DCADF /* vertex_array_objects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vertex_array_objects.png; sourceTree = "<group>"; };
 		673F9DC525C98EAB0055C61D /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		673F9DC625C98F9E0055C61D /* pipeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipeline.png; sourceTree = "<group>"; };
-		678A96D725CC352E006321A0 /* Shader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Shader; sourceTree = BUILT_PRODUCTS_DIR; };
+		678A96D725CC352E006321A0 /* 3.1_Shader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 3.1_Shader; sourceTree = BUILT_PRODUCTS_DIR; };
 		678A96D925CC352E006321A0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		678A96E925CC35BC006321A0 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		678A96EB25CC396E006321A0 /* vertex.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = vertex.shader; sourceTree = "<group>"; };
@@ -539,7 +539,7 @@
 				67BFEF1025C8EA7800A11686 /* Triangle */,
 				672FCA9C25CAE6D0002DCADF /* Triangle_TEST */,
 				672FCAB425CAE9E9002DCADF /* Triangle_EBO */,
-				678A96D725CC352E006321A0 /* Shader */,
+				678A96D725CC352E006321A0 /* 3.1_Shader */,
 				678A971025D02862006321A0 /* 3.2_Shader */,
 				678A978B25D113C8006321A0 /* 3.3_Shader */,
 				678A97AA25D1327D006321A0 /* 4.1_Texture */,
@@ -624,9 +624,9 @@
 			productReference = 672FCAB425CAE9E9002DCADF /* Triangle_EBO */;
 			productType = "com.apple.product-type.tool";
 		};
-		678A96D625CC352E006321A0 /* Shader */ = {
+		678A96D625CC352E006321A0 /* 3.1_Shader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 678A96DD25CC352E006321A0 /* Build configuration list for PBXNativeTarget "Shader" */;
+			buildConfigurationList = 678A96DD25CC352E006321A0 /* Build configuration list for PBXNativeTarget "3.1_Shader" */;
 			buildPhases = (
 				678A96D325CC352E006321A0 /* Sources */,
 				678A96D425CC352E006321A0 /* Frameworks */,
@@ -637,9 +637,9 @@
 			);
 			dependencies = (
 			);
-			name = Shader;
+			name = 3.1_Shader;
 			productName = Shader;
-			productReference = 678A96D725CC352E006321A0 /* Shader */;
+			productReference = 678A96D725CC352E006321A0 /* 3.1_Shader */;
 			productType = "com.apple.product-type.tool";
 		};
 		678A970F25D02862006321A0 /* 3.2_Shader */ = {
@@ -804,7 +804,7 @@
 				67BFEF0F25C8EA7800A11686 /* Triangle */,
 				672FCA9B25CAE6D0002DCADF /* Triangle_TEST */,
 				672FCAB325CAE9E9002DCADF /* Triangle_EBO */,
-				678A96D625CC352E006321A0 /* Shader */,
+				678A96D625CC352E006321A0 /* 3.1_Shader */,
 				678A970F25D02862006321A0 /* 3.2_Shader */,
 				678A978A25D113C8006321A0 /* 3.3_Shader */,
 				678A97A925D1327D006321A0 /* 4.1_Texture */,
@@ -2044,7 +2044,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		678A96DD25CC352E006321A0 /* Build configuration list for PBXNativeTarget "Shader" */ = {
+		678A96DD25CC352E006321A0 /* Build configuration list for PBXNativeTarget "3.1_Shader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				678A96DB25CC352E006321A0 /* Debug */,
