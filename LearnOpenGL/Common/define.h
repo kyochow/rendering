@@ -1,5 +1,8 @@
 #ifndef define_h
 #define define_h
+
+const char* PROJECT_ROOT ="/Users/yons/Documents/github/rendering/LearnOpenGL/";
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
