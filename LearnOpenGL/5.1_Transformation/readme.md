@@ -156,7 +156,7 @@ GLM 常用0.9.8版本
     shader.setMat4("transform",trans);
 ```
 
-建议，先平移，再旋转，再缩放，避免因loacal space 和 global space造成的错误
+建议，先平移，再旋转，再缩放，避免因loacal space 和 world space造成的错误
 
 ### 
 
