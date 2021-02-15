@@ -44,6 +44,11 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
+		<key>6.2_CoordinateSystem_DrawCall.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>HelloWorld.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
