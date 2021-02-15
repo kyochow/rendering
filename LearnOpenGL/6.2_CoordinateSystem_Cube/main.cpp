@@ -134,6 +134,8 @@ int main(int argc, const char * argv[]) {
         //和之前不同的是不仅清楚颜色，还得清除深度缓冲值
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
+        glBindVertexArray(VAO);
+        
         shader.use();
         // either set it manually like so:
         glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
@@ -156,7 +158,7 @@ int main(int argc, const char * argv[]) {
         shader.setMat4("projMat",projMat);
         
         
-        glBindVertexArray(VAO);
+        
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glfwSwapBuffers(win);
         glfwPollEvents();

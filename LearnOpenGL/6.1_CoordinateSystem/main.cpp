@@ -106,36 +106,36 @@ int main(int argc, const char * argv[]) {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
-    shader.use();
-    // either set it manually like so:
-    glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
-    // or set it via the texture class
-    shader.setInt("texture2", 1);
-    //多张贴图，需要先激活指定位置
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, textureA);
-    glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D, textureB);
-    
-    //M  目的，向后倾倒55度
-    glm::mat4 modelMat;
-    modelMat = glm::rotate(modelMat, glm::radians(-55.0f),glm::vec3(1.0f,0,0));
-    //V  目的，有一个位置为3的“Camera”，所以V里为后退3
-    glm::mat4 viewMat;
-    viewMat = glm::translate(viewMat, glm::vec3(0,0,-3.0f));
-    //P  目的，生成投影矩阵，构建平截头体
-    glm::mat4 projMat = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 100.0f);
-    
-    shader.setMat4("modelMat",modelMat);
-    shader.setMat4("viewMat",viewMat);
-    shader.setMat4("projMat",projMat);
-    
     while(!glfwWindowShouldClose(win)){
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
         glBindVertexArray(VAO);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);
+        
+        shader.use();
+        // either set it manually like so:
+        glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
+        // or set it via the texture class
+        shader.setInt("texture2", 1);
+        //多张贴图，需要先激活指定位置
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, textureA);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, textureB);
+        
+        //M  目的，向后倾倒55度
+        glm::mat4 modelMat;
+        modelMat = glm::rotate(modelMat, glm::radians(-55.0f),glm::vec3(1.0f,0,0));
+        //V  目的，有一个位置为3的“Camera”，所以V里为后退3
+        glm::mat4 viewMat;
+        viewMat = glm::translate(viewMat, glm::vec3(0,0,-3.0f));
+        //P  目的，生成投影矩阵，构建平截头体
+        glm::mat4 projMat = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 100.0f);
+        
+        shader.setMat4("modelMat",modelMat);
+        shader.setMat4("viewMat",viewMat);
+        shader.setMat4("projMat",projMat);
         
         glDrawElements(GL_TRIANGLES, 6,GL_UNSIGNED_INT, 0);
         glfwSwapBuffers(win);
