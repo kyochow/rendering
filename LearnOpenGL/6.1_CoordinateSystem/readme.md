@@ -56,21 +56,35 @@ PS:如果只是图元(Primitive)，例如三角形，的一部分超出了裁剪
 
 ###### 正射投影
 
+![正射投影](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/6.1_CoordinateSystem/orthographic_frustum.png)
+
 正射投影矩阵定义了一个类似立方体的平截头箱，w = 1，glm代码：
+
+`//前两个参数指定了平截头体的左右坐标，`
+
+`//第三和第四参数指定了平截头体的底部和顶部`
+
+`//第五和第六个参数则定义了近平面和远平面的距离`
 
 `glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, 0.1f, 100.0f);`
 
-![正射投影](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/6.1_CoordinateSystem/orthographic_frustum.png)
-
 ###### 透视投影
 
+![坐标系统](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/6.1_CoordinateSystem/perspective_frustum.png)
+
 离你越远的东西看起来更小。这个奇怪的效果称之为透视(Perspective)，使用透视投影矩阵来完成投影，这个投影矩阵将给定的平截头体范围映射到裁剪空间，除此之外还修改了每个顶点坐标的w值，从而使得离观察者越远的顶点坐标w分量越大 out = vec3(x/w,y/w,z/w),对应的glm代码：
+
+`//第一个参数 fov`
+
+`//第二个参数 宽高比`
+
+`//第三个参数 近距离`
+
+`//第四个参数 远距离`
 
 `glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)width/(float)height, 0.1f, 100.0f);`
 
 `glm::perspective`所做的其实就是创建了一个定义了可视空间的大**平截头体**，任何在这个平截头体以外的东西最后都不会出现在裁剪空间体积内，并且将会受到裁剪，
-
-![坐标系统](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/6.1_CoordinateSystem/perspective_frustum.png)
 
 ##### Viewport Transform 视窗变换
 
