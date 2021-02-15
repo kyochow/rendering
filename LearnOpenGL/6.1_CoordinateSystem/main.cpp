@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
     
     glViewport(0, 0, 800, 600);
     
-    Shader shader = Shader("6.1_Transformation/");
+    Shader shader = Shader("6.1_CoordinateSystem/");
     
     unsigned int VAO;
     glGenVertexArrays(1,&VAO);
@@ -117,10 +117,18 @@ int main(int argc, const char * argv[]) {
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, textureB);
     
-    glm::mat4 trans;
-    trans = glm::rotate(trans, glm::radians(45.0f),glm::vec3(1.0f,0,0));
+    //M  目的，向后倾倒55度
+    glm::mat4 modelMat;
+    modelMat = glm::rotate(modelMat, glm::radians(-55.0f),glm::vec3(1.0f,0,0));
+    //V  目的，有一个位置为3的“Camera”，所以V里为后退3
+    glm::mat4 viewMat;
+    viewMat = glm::translate(viewMat, glm::vec3(0,0,-3.0f));
+    //P  目的，生成投影矩阵，构建平截头体
+    glm::mat4 projMat = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 100.0f);
     
-    shader.setMat4("transform",trans);
+    shader.setMat4("modelMat",modelMat);
+    shader.setMat4("viewMat",viewMat);
+    shader.setMat4("projMat",projMat);
     
     while(!glfwWindowShouldClose(win)){
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
