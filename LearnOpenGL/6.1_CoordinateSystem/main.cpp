@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
     
     glViewport(0, 0, 800, 600);
     
-    Shader shader = Shader("5.1_Transformation/");
+    Shader shader = Shader("6.1_Transformation/");
     
     unsigned int VAO;
     glGenVertexArrays(1,&VAO);
@@ -72,10 +72,6 @@ int main(int argc, const char * argv[]) {
     unsigned char *data = stbi_load(imgPath, &width, &height, &nrChannels, 0);
     if (data)
     {
-        //第一参数 类型
-        //第二参数 mipmap等级
-        //第三参数 格式 RGB
-        //第四参数 
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
     }
@@ -96,9 +92,6 @@ int main(int argc, const char * argv[]) {
     unsigned char *data2 = stbi_load(imgPath2, &width2, &height2, &nrChannels2, 0);
     if (data2)
     {
-        //第一参数 类型
-        //第二参数 mipmap等级
-        //第三参数 格式 RGB
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width2, height2, 0, GL_RGBA, GL_UNSIGNED_BYTE, data2);
         glGenerateMipmap(GL_TEXTURE_2D);
     }
@@ -124,17 +117,8 @@ int main(int argc, const char * argv[]) {
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, textureB);
     
-    
     glm::mat4 trans;
-    //计算位置
-    
-    //1,使用平移
-    trans = glm::translate(trans, glm::vec3(-0.5f,0,1));
-    
-    //2,使用旋转
-    trans = glm::rotate(trans, glm::radians(45.0f),glm::vec3(0,0,1.0f));
-    //3,使用缩放
-    trans = glm::scale(trans, glm::vec3(1.5f,1.5f,1.5f));
+    trans = glm::rotate(trans, glm::radians(45.0f),glm::vec3(1.0f,0,0));
     
     shader.setMat4("transform",trans);
     
