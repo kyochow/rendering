@@ -1828,6 +1828,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../glfw/3.3.2/include\"",
 					"\"$(SRCROOT)/../glew/2.2.0_1/include\"",
+					"\"$(SRCROOT)/../glm\"",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../glew/2.2.0_1/lib\"",
@@ -1843,6 +1844,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../glfw/3.3.2/include\"",
 					"\"$(SRCROOT)/../glew/2.2.0_1/include\"",
+					"\"$(SRCROOT)/../glm\"",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../glew/2.2.0_1/lib\"",

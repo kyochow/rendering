@@ -6,6 +6,9 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include "define.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 //VBO Data
 float vertices[] = {
@@ -120,6 +123,20 @@ int main(int argc, const char * argv[]) {
     glBindTexture(GL_TEXTURE_2D, textureA);
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, textureB);
+    
+    
+    glm::mat4 trans;
+    //计算位置
+    
+    //1,使用平移
+    trans = glm::translate(trans, glm::vec3(-0.5f,0,1));
+    
+    //2,使用旋转
+    trans = glm::rotate(trans, glm::radians(45.0f),glm::vec3(0,0,1.0f));
+    //3,使用缩放
+    trans = glm::scale(trans, glm::vec3(1.5f,1.5f,1.5f));
+    
+    shader.setMat4("transform",trans);
     
     while(!glfwWindowShouldClose(win)){
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
