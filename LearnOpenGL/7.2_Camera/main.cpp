@@ -129,7 +129,7 @@ int main(int argc, const char * argv[]) {
     };
     
     while(!glfwWindowShouldClose(win)){
-        
+        caculateDeltaTime();
         checkESC(win);
         processInput(win);
         
@@ -160,9 +160,6 @@ int main(int argc, const char * argv[]) {
         
         glfwSwapBuffers(win);
         glfwPollEvents();
-        
-        //计算出deltaTime
-        caculateDeltaTime();
     }
     glfwTerminate();
     exit(EXIT_SUCCESS);
@@ -172,7 +169,7 @@ int main(int argc, const char * argv[]) {
 
 void processInput(GLFWwindow *window)
 {
-    float cameraSpeed = 0.05f; // adjust accordingly
+    float cameraSpeed = 1.2f * deltaTime; // adjust accordingly
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
         camera.Position += cameraSpeed * camera.Forward;
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
