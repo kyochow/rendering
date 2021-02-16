@@ -64,7 +64,7 @@ int main(int argc, const char * argv[]) {
     glEnable(GL_DEPTH_TEST); // 这里需要开启Z Test
     glViewport(0, 0, 800, 600);
     
-    Shader shader = Shader("7.1_Camera/");
+    Shader shader = Shader("7.2_Camera/");
     
     unsigned int VAO;
     glGenVertexArrays(1,&VAO);
