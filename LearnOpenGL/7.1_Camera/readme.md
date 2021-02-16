@@ -1,26 +1,48 @@
-#  旋转的Cube
+#  封装Camera
 
-## Z-buffer 深度缓冲
+## 概述
 
-OpenGL存储它的所有深度信息于一个Z缓冲(Z-buffer)中，也被称为深度缓冲(Depth Buffer)
+OpenGL本身没有摄像机的概念
 
-OpenGL已经提供了对应的API
+可以通过把场景中的所有物体往相反方向移动的方式来模拟出摄像机，产生一种**我们**在移动的感觉，而不是场景在移动
 
-`glEnable(GL_DEPTH_TEST);`
+一个Camera必备的要素
 
-因为我们使用了深度测试，我们也想要在每次渲染迭代之前清除深度缓冲（否则前一帧的深度信息仍然保存在缓冲中）。就像清除颜色缓冲一样，我们可以通过在glClear函数中指定DEPTH_BUFFER_BIT位来清除深度缓冲：
-`glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);`
+- 这个Camera的位置 Position
+
+- 方向 Direction
+- 向右的向量 Right
+- 向上的向量 Up
 
 
 
-对应 Unity中
+![](/Users/yons/Documents/github/rendering/LearnOpenGL/7.1_Camera/camera_axes.png)
 
-Camera的Clear Flag设置
 
-SkyBox = glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//清理颜色和深度信息 补天空盒颜色
 
-Solid Color = glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//清理颜色和深度信息，补纯色
+将上面对应颜色的向量值，带入下面的矩阵，则可以快速得到View Matrix
 
-Depth Only = glClear(GL_DEPTH_BUFFER_BIT ）只清理深度信息，不清理颜色
 
-Don‘t Clear 就是完全不清理
+
+Look At 矩阵
+
+​                 $$ LookAt = \begin{bmatrix}\begin{matrix} \color{red}{R_x} & \color{red}{R_y} & \color{red}{R_z} & 0 \\\color{green}{U_x} & \color{green}{U_y} & \color{green}{U_z} & 0 \\\color{blue}{D_x} & \color{blue}{D_y} & \color{blue}{D_z} & 0 \\0 & 0 & 0 & 1 \end{matrix}\end{bmatrix} * \begin{bmatrix}\begin{matrix} 1 & 0 & 0 & -\color{purple}{P_x} \\0 & 1 & 0 & -\color{purple}{P_y} \\0 & 0 & 1 & -\color{purple}{P_z} \\0 & 0 & 0 & 1 \end{matrix}\end{bmatrix} $$
+
+
+
+
+
+
+
+## 欧拉角：
+
+![](/Users/yons/Documents/github/rendering/LearnOpenGL/7.1_Camera/camera_pitch_yaw_roll.png)
+
+pitch 俯角
+
+yaw 水平旋转角
+
+roll 垂直旋转角
+
+其实我们的Camera只需要pitch + yaw，因为roll会导致视角倾斜，人类很不习惯
+

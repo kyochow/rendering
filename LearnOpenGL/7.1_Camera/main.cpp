@@ -63,7 +63,7 @@ int main(int argc, const char * argv[]) {
     glEnable(GL_DEPTH_TEST); // 这里需要开启Z Test
     glViewport(0, 0, 800, 600);
     
-    Shader shader = Shader("7.1_Camera/");
+    Shader shader = Shader("6.2_CoordinateSystem_DrawCall/");
     
     unsigned int VAO;
     glGenVertexArrays(1,&VAO);
@@ -103,30 +103,24 @@ int main(int argc, const char * argv[]) {
     }
     stbi_image_free(data);
     
-    //第二张贴图 ----------------------
-    unsigned int textureB;
-    glGenTextures(1, &textureB);
-    glBindTexture(GL_TEXTURE_2D, textureB);//绑定
-    
-    char imgPath2[1024];
-    sprintf(imgPath2, "%s%s", PROJECT_ROOT,"Arts/awesomeface.png");
-    int width2, height2, nrChannels2;
-    unsigned char *data2 = stbi_load(imgPath2, &width2, &height2, &nrChannels2, 0);
-    if (data2)
-    {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width2, height2, 0, GL_RGBA, GL_UNSIGNED_BYTE, data2);
-        glGenerateMipmap(GL_TEXTURE_2D);
-    }
-    else
-    {
-        std::cout << "Failed to load texture 2" << std::endl;
-    }
-    stbi_image_free(data2);
     // 为当前绑定的纹理对象设置环绕、过滤方式
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    
+    glm::vec3 cubePositions[] = {
+      glm::vec3( 0.0f,  0.0f,  0.0f),
+      glm::vec3( 2.0f,  5.0f, -15.0f),
+      glm::vec3(-1.5f, -2.2f, -2.5f),
+      glm::vec3(-3.8f, -2.0f, -12.3f),
+      glm::vec3( 2.4f, -0.4f, -3.5f),
+      glm::vec3(-1.7f,  3.0f, -7.5f),
+      glm::vec3( 1.3f, -2.0f, -2.5f),
+      glm::vec3( 1.5f,  2.0f, -2.5f),
+      glm::vec3( 1.5f,  0.2f, -1.5f),
+      glm::vec3(-1.3f,  1.0f, -1.5f)
+    };
     
     while(!glfwWindowShouldClose(win)){
         
@@ -135,31 +129,26 @@ int main(int argc, const char * argv[]) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         glBindVertexArray(VAO);
-        
         shader.use();
-        // either set it manually like so:
-        glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
-        // or set it via the texture class
-        shader.setInt("texture2", 1);
         //多张贴图，需要先激活指定位置
-        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, textureA);
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, textureB);
-        glm::mat4 modelMat;
-        modelMat = glm::rotate(modelMat, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
-        //V  目的，有一个位置为3的“Camera”，所以V里为后退3
-        glm::mat4 viewMat;
-        viewMat = glm::translate(viewMat, glm::vec3(0,0,-3.0f));
-        //P  目的，生成投影矩阵，构建平截头体
-        glm::mat4 projMat = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 100.0f);
-        shader.setMat4("modelMat",modelMat);
-        shader.setMat4("viewMat",viewMat);
-        shader.setMat4("projMat",projMat);
         
+        for(unsigned int i = 0; i < 10; i++)
+        {
+            glm::mat4 modelMat;
+            modelMat = glm::translate(modelMat, cubePositions[i]);
+            modelMat = glm::rotate(modelMat, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
+            //V  目的，有一个位置为3的“Camera”，所以V里为后退3
+            glm::mat4 viewMat;
+            viewMat = glm::translate(viewMat, glm::vec3(0,0,-3.0f));
+            //P  目的，生成投影矩阵，构建平截头体
+            glm::mat4 projMat = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 100.0f);
+            shader.setMat4("modelMat",modelMat);
+            shader.setMat4("viewMat",viewMat);
+            shader.setMat4("projMat",projMat);
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+        }
         
-        
-        glDrawArrays(GL_TRIANGLES, 0, 36);
         glfwSwapBuffers(win);
         glfwPollEvents();
     }
