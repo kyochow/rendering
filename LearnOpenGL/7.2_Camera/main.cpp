@@ -56,7 +56,8 @@ float vertices[] = {
     -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
 };
 
-
+Camera camera = Camera(glm::vec3(0,0,3.0f),0,180.0f,glm::vec3(0,1.0f,0));
+void processInput(GLFWwindow *window);
 
 int main(int argc, const char * argv[]) {
     
@@ -127,11 +128,10 @@ int main(int argc, const char * argv[]) {
       glm::vec3(-1.3f,  1.0f, -1.5f)
     };
     
-    Camera camera = Camera(glm::vec3(0,0,3.0f),0,180.0f,glm::vec3(0,1.0f,0));
-    
     while(!glfwWindowShouldClose(win)){
         
         checkESC(win);
+        processInput(win);
         
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         //和之前不同的是不仅清楚颜色，还得清除深度缓冲值
@@ -160,11 +160,27 @@ int main(int argc, const char * argv[]) {
         
         glfwSwapBuffers(win);
         glfwPollEvents();
+        
+        //计算出deltaTime
+        caculateDeltaTime();
     }
     glfwTerminate();
     exit(EXIT_SUCCESS);
     return 0;
 }
 
+
+void processInput(GLFWwindow *window)
+{
+    float cameraSpeed = 0.05f; // adjust accordingly
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        camera.Position += cameraSpeed * camera.Forward;
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        camera.Position -= cameraSpeed * camera.Forward;
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        camera.Position -= glm::normalize(glm::cross(camera.Forward, camera.Up)) * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        camera.Position += glm::normalize(glm::cross(camera.Forward, camera.Up)) * cameraSpeed;
+}
 
 

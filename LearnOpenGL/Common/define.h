@@ -6,6 +6,15 @@ const char* PROJECT_ROOT ="/Users/yons/Documents/github/rendering/LearnOpenGL/";
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+float deltaTime = 0.0f;    // 当前帧与上一帧的时间差
+float lastFrame = 0.0f;
+
+void caculateDeltaTime(){
+    float currentFrame = glfwGetTime();
+    deltaTime = currentFrame - lastFrame;
+    lastFrame = currentFrame;
+}
+
 GLFWwindow* initGL(){
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
