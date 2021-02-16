@@ -56,6 +56,8 @@ float vertices[] = {
     -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
 };
 
+
+
 int main(int argc, const char * argv[]) {
     
     auto win = initGL();
@@ -123,9 +125,11 @@ int main(int argc, const char * argv[]) {
       glm::vec3(-1.3f,  1.0f, -1.5f)
     };
     
-    Camera camera = Camera(glm::vec3(0,0,3.0f),glm::vec3(0,0,0),glm::vec3(0,1.0f,0));
+    Camera camera = Camera(glm::vec3(0,0,3.0f),0,180.0f,glm::vec3(0,1.0f,0));
     
     while(!glfwWindowShouldClose(win)){
+        
+        checkESC(win);
         
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
         //和之前不同的是不仅清楚颜色，还得清除深度缓冲值
@@ -159,3 +163,6 @@ int main(int argc, const char * argv[]) {
     exit(EXIT_SUCCESS);
     return 0;
 }
+
+
+
