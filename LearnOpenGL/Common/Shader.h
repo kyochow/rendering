@@ -1,8 +1,5 @@
-#ifndef Shader_hpp
-#define Shader_hpp
-
+#pragma once
 #include <stdio.h>
-#endif /* Shader_hpp */
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <string>
