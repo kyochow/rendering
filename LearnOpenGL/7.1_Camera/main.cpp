@@ -3,6 +3,7 @@
 #include <GLFW/glfw3.h>
 #include <fstream>
 #include "Shader.h"
+#include "Camera.h"
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include "define.h"
@@ -122,6 +123,8 @@ int main(int argc, const char * argv[]) {
       glm::vec3(-1.3f,  1.0f, -1.5f)
     };
     
+    Camera camera = Camera(glm::vec3(0,0,3.0f),glm::vec3(0,0,0),glm::vec3(0,1.0f,0));
+    
     while(!glfwWindowShouldClose(win)){
         
         glClearColor(0.2f, 0.4f, 0.5f, 1.0f);
@@ -138,9 +141,9 @@ int main(int argc, const char * argv[]) {
             glm::mat4 modelMat;
             modelMat = glm::translate(modelMat, cubePositions[i]);
             modelMat = glm::rotate(modelMat, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
-            //V  目的，有一个位置为3的“Camera”，所以V里为后退3
-            glm::mat4 viewMat;
-            viewMat = glm::translate(viewMat, glm::vec3(0,0,-3.0f));
+            
+            glm::mat4 viewMat = camera.GetViewMatrix();
+            
             //P  目的，生成投影矩阵，构建平截头体
             glm::mat4 projMat = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 100.0f);
             shader.setMat4("modelMat",modelMat);
