@@ -21,15 +21,23 @@ Camera::Camera(glm::vec3 position,float pitch,float yaw,glm::vec3 worldup)
     Position = position;
     WorldUp = worldup;
     
-    pitch  = glm::radians(pitch);
-    yaw = glm::radians(yaw);
-
-    Forward.x = glm::cos(pitch) * glm::sin(yaw);
-    Forward.y = glm::sin(pitch);
-    Forward.z = glm::cos(pitch)*glm::cos(yaw);
+    SetEuler(pitch,yaw);
     
     Right = glm::normalize(glm::cross(worldup, Forward));
     Up = glm::normalize(glm::cross(Forward, Right));
+}
+
+void Camera::SetEuler(float pitch,float yaw)
+{
+    Pitch = pitch;
+    Yaw = yaw;
+    
+    pitch  = glm::radians(pitch);
+    yaw = glm::radians(yaw);
+    
+    Forward.x = glm::cos(pitch) * glm::sin(yaw);
+    Forward.y = glm::sin(pitch);
+    Forward.z = glm::cos(pitch)*glm::cos(yaw);
 }
 
 glm::mat4 Camera::GetViewMatrix(){

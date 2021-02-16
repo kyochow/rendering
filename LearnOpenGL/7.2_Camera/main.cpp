@@ -58,6 +58,7 @@ float vertices[] = {
 
 Camera camera = Camera(glm::vec3(0,0,3.0f),0,180.0f,glm::vec3(0,1.0f,0));
 void processInput(GLFWwindow *window);
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 
 int main(int argc, const char * argv[]) {
     
@@ -67,6 +68,7 @@ int main(int argc, const char * argv[]) {
     glEnable(GL_DEPTH_TEST); // 这里需要开启Z Test
     //隐藏掉鼠标
     glfwSetInputMode(win, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    glfwSetCursorPosCallback(win, mouse_callback);
     glViewport(0, 0, 800, 600);
     
     Shader shader = Shader("7.2_Camera/");
@@ -179,5 +181,25 @@ void processInput(GLFWwindow *window)
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         camera.Position += glm::normalize(glm::cross(camera.Forward, camera.Up)) * cameraSpeed;
 }
+float lastX , lastY ;
+bool firstMouse = true;
+void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+{
+    if(firstMouse)
+    {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+    }
+    
+    float xoffset = xpos - lastX;
+    float yoffset = lastY - ypos; // 注意这里是相反的，因为y坐标是从底部往顶部依次增大的
+    lastX = xpos;
+    lastY = ypos;
 
-
+    float sensitivity = 0.05f;
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
+    
+    camera.ProcessMouseMovement(xoffset,yoffset);
+}
