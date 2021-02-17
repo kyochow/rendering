@@ -492,9 +492,9 @@
 		E40639E825DBEF890037353A /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
 		E40639F725DC02B20037353A /* 7.2_Camera */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 7.2_Camera; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40639F925DC02B20037353A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		E4063A0725DC030E0037353A /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; };
+		E4063A0725DC030E0037353A /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
 		E4063A0825DC030E0037353A /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		E4063A0925DC030E0037353A /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.shader; sourceTree = "<group>"; };
+		E4063A0925DC030E0037353A /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.shader; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
 		E4358D9225D835BE00DF2184 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../glfw/3.3.2/lib/libglfw.3.dylib; sourceTree = "<group>"; };
 		E4358D9625D835F100DF2184 /* libGLEW.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.dylib; path = ../glew/2.2.0_1/lib/libGLEW.2.2.dylib; sourceTree = "<group>"; };
 		E4FFCF0225D9789A000DB39D /* 5.1_Transformation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 5.1_Transformation; sourceTree = BUILT_PRODUCTS_DIR; };

@@ -7,7 +7,7 @@
 		<key>3.1_Shader.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>12</integer>
 		</dict>
 		<key>3.2_Shader.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,47 +17,47 @@
 		<key>3.3_Shader.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>8</integer>
 		</dict>
 		<key>4.1_Texture.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>13</integer>
 		</dict>
 		<key>4.2_Texture.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>5.1_Transformation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>3</integer>
 		</dict>
 		<key>6.1_CoordinateSystem.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>4</integer>
 		</dict>
 		<key>6.2_CoordinateSystem_Cube.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>7</integer>
 		</dict>
 		<key>6.2_CoordinateSystem_DrawCall.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>6</integer>
 		</dict>
 		<key>7.1_Camera.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>9</integer>
 		</dict>
 		<key>7.2_Camera.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>10</integer>
 		</dict>
 		<key>HelloWorld.xcscheme_^#shared#^_</key>
 		<dict>
@@ -72,17 +72,17 @@
 		<key>Triangle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Triangle_EBO.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Triangle_TEST.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>11</integer>
 		</dict>
 	</dict>
 </dict>
