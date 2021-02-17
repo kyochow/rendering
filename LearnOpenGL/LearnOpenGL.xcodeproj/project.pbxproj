@@ -439,7 +439,7 @@
 		678A971925D02882006321A0 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		678A971A25D02882006321A0 /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.shader; sourceTree = "<group>"; };
 		678A971B25D02882006321A0 /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; };
-		678A978025D031A1006321A0 /* shader2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader2.h; sourceTree = "<group>"; };
+		678A978025D031A1006321A0 /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
 		678A978B25D113C8006321A0 /* 3.3_Shader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 3.3_Shader; sourceTree = BUILT_PRODUCTS_DIR; };
 		678A978D25D113C8006321A0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		678A979E25D114CC006321A0 /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; };
@@ -709,7 +709,7 @@
 			isa = PBXGroup;
 			children = (
 				678A97BF25D13548006321A0 /* stb_image.h */,
-				678A978025D031A1006321A0 /* shader2.h */,
+				678A978025D031A1006321A0 /* shader.h */,
 				678A97CA25D2366F006321A0 /* define.h */,
 				E40639E825DBEF890037353A /* camera.h */,
 			);
