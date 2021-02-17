@@ -38,7 +38,7 @@ int main(int argc, const char * argv[]) {
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
     
-    unsigned int textureA = loadImage("Arts/container.jpg");
+    unsigned int textureA = loadImage("Arts/container.jpg",GL_RGB,GL_RGB,0);
     
     // 为当前绑定的纹理对象设置环绕、过滤方式
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);

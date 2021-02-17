@@ -105,11 +105,12 @@ void checkESC(GLFWwindow *window)
 }
 
 //加载一张贴图到GPU
-unsigned int loadImage(const char* imgPath){
+unsigned int loadImage(const char* imgPath,GLint internalFormat,GLenum format,int textureSlot){
     //申请贴图 第一张
-    unsigned int textureA;
-    glGenTextures(1, &textureA);
-    glBindTexture(GL_TEXTURE_2D, textureA);//绑定
+    unsigned int texBuffer;
+    glGenTextures(1, &texBuffer);
+    glActiveTexture(GL_TEXTURE0 + textureSlot);
+    glBindTexture(GL_TEXTURE_2D, texBuffer);//绑定
     
     char imgFullPath[1024];
     sprintf(imgFullPath, "%s%s", PROJECT_ROOT,imgPath);
@@ -117,7 +118,7 @@ unsigned int loadImage(const char* imgPath){
     unsigned char *data = stbi_load(imgFullPath, &width, &height, &nrChannels, 0);
     if (data)
     {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, width, height, 0, format, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
     }
     else
@@ -125,7 +126,7 @@ unsigned int loadImage(const char* imgPath){
         std::cout << "Failed to load texture" << std::endl;
     }
     stbi_image_free(data);
-    return textureA;
+    return texBuffer;
 }
 
 #endif
