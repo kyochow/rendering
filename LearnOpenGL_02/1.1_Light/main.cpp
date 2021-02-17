@@ -73,17 +73,11 @@ int main(int argc, const char * argv[]) {
         //和之前不同的是不仅清楚颜色，还得清除深度缓冲值
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
-        glBindVertexArray(VAO);
         shader.use();
         
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, textureA);
-        shader.setInt("texture1", 0);
-        
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, textureB);
-        shader.setInt("texture2", 1);
-        
+        //V矩阵 设置一次就行
+        glm::mat4 viewMat = camera.GetViewMatrix();
+        shader.setMat4("viewMat",viewMat);
         
         for(unsigned int i = 0; i < 10; i++)
         {
@@ -91,14 +85,26 @@ int main(int argc, const char * argv[]) {
             modelMat = glm::translate(modelMat, cubePositions[i]);
             modelMat = glm::rotate(modelMat, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
             
-            //V矩阵
-            glm::mat4 viewMat = camera.GetViewMatrix();
-            
             //P矩阵
             glm::mat4 projMat = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 100.0f);
             shader.setMat4("modelMat",modelMat);
-            shader.setMat4("viewMat",viewMat);
             shader.setMat4("projMat",projMat);
+            
+            //绑定VAO
+            glBindVertexArray(VAO);
+            
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, textureA);
+            shader.setInt("texture1", 0);
+            
+            glActiveTexture(GL_TEXTURE1);
+            glBindTexture(GL_TEXTURE_2D, textureB);
+            shader.setInt("texture2", 1);
+            
+            shader.setVec3("ambientColor", glm::vec3(1.0f, 1.0f, 1.0f));
+            shader.setVec3("objectColor", glm::vec3(1.0f, 0.5f, 0.31f));
+            
+            //画
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
         
