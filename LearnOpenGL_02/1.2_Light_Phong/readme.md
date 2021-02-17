@@ -81,15 +81,34 @@ Normal = mat3(transpose(inverse(model))) * aNormal;
 
 
 
+第一步 将camera传递给fragment shader
+
+```
+lightingShader.setVec3("viewPos", camera.Position);
+```
+
+第二步 计算反射向量
+
+```
+vec3 viewDir = normalize(viewPos - FragPos);
+vec3 reflectDir = reflect(-lightDir, Normal);
+```
+
+其中reflect是OpenGL提供的方法，只需要提供入射向量和发现，返回反射向量
+
+第三步 
+
+```
+float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
+vec3 specular = specularStrength * spec * lightColor;
+```
+
+先计算视线方向与反射方向的点乘
+
+然后然后取它的32次幂。这个32是高光的反光度(Shininess)
+
+一个物体的反光度越高，反射光的能力越强，散射得越少，高光点就会越小
 
 
 
-
-
-
-
-
-
-
-
-
+![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL_02/1.2_Light_Phong/basic_lighting_specular_shininess.png)
