@@ -13,8 +13,6 @@
 int main(int argc, const char * argv[]) {
     
     auto win = initGL();
-    //设置这个image loader库上下反转图片
-    stbi_set_flip_vertically_on_load(true);
     glEnable(GL_DEPTH_TEST); // 这里需要开启Z Test
     //隐藏掉鼠标
     glfwSetInputMode(win, GLFW_CURSOR, GLFW_CURSOR_DISABLED);

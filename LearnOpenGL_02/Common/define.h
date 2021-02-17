@@ -15,7 +15,7 @@ float lastFrame = 0.0f;
 
 //VBO Data 一个Cube立方体的顶点
 float cubeVertices[] = {
-    -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f, 0.0f, //前三个是位置，后两个是uv
      0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
      0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
      0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
@@ -91,6 +91,9 @@ GLFWwindow* initGL(){
     
     glewExperimental = GL_TRUE;
     glewInit();
+    
+    //设置image loader库上下反转图片
+    stbi_set_flip_vertically_on_load(true);
     return win;
 }
 
