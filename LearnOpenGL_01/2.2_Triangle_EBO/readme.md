@@ -12,7 +12,7 @@
 
 **Tip 2 : 不同的VAO 对不同的 VBO，会使用不同的寄存器，读取方式也各不相同**
 
-![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/2.1_Triangle_EBO/vertex_array_objects.png)
+![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL_01/2.1_Triangle_EBO/vertex_array_objects.png)
 
 
 
@@ -51,5 +51,5 @@ VBO和VAO的生命周期由OpenGL维护
 
  整体的图如下：来自傅老师
 
- ![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL/2.1_Triangle_EBO/opengl_context.png)
+ ![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL_01/2.1_Triangle_EBO/opengl_context.png)
 
