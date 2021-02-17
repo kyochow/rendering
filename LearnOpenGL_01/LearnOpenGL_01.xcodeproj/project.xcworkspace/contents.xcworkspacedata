@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/yons/Documents/github/rendering/LearnOpenGL_01/LearnOpenGL_01.xcodeproj">
    </FileRef>
 </Workspace>

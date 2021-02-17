@@ -17,7 +17,7 @@
                BlueprintIdentifier = "67BFEEC625C842CA00A11686"
                BuildableName = "HelloWorld"
                BlueprintName = "HelloWorld"
-               ReferencedContainer = "container:LearnOpenGL.xcodeproj">
+               ReferencedContainer = "container:LearnOpenGL_01.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "67BFEEC625C842CA00A11686"
             BuildableName = "HelloWorld"
             BlueprintName = "HelloWorld"
-            ReferencedContainer = "container:LearnOpenGL.xcodeproj">
+            ReferencedContainer = "container:LearnOpenGL_01.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "67BFEEC625C842CA00A11686"
             BuildableName = "HelloWorld"
             BlueprintName = "HelloWorld"
-            ReferencedContainer = "container:LearnOpenGL.xcodeproj">
+            ReferencedContainer = "container:LearnOpenGL_01.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

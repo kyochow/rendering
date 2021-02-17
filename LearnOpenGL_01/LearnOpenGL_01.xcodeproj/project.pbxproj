@@ -1238,7 +1238,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 67BFEEC025C8426500A11686 /* Build configuration list for PBXProject "LearnOpenGL" */;
+			buildConfigurationList = 67BFEEC025C8426500A11686 /* Build configuration list for PBXProject "LearnOpenGL_01" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -3273,7 +3273,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67BFEEC025C8426500A11686 /* Build configuration list for PBXProject "LearnOpenGL" */ = {
+		67BFEEC025C8426500A11686 /* Build configuration list for PBXProject "LearnOpenGL_01" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67BFEEC125C8426500A11686 /* Debug */,
