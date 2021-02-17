@@ -123,7 +123,7 @@ int main(int argc, const char * argv[]) {
       glm::vec3(-1.3f,  1.0f, -1.5f)
     };
     
-    Camera camera = Camera(glm::vec3(0,0,3.0f),glm::vec3(0,0,0),glm::vec3(0,1.0f,0));
+    Camera camera(glm::vec3(0,0,3.0f));
     
     while(!glfwWindowShouldClose(win)){
         
