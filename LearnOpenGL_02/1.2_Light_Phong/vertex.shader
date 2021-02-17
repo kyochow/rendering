@@ -14,6 +14,7 @@ void main()
     //从右向左
     gl_Position = projMat * viewMat * modelMat * vec4(aPos,1.0);
     FragPos = mat3(modelMat) * aPos;
-    Normal = mat3(modelMat) * aNormal;
+    //法线矩阵
+    Normal =mat3(transpose(inverse(modelMat))) * aNormal;
     
 }

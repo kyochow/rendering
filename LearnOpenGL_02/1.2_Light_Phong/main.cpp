@@ -118,6 +118,8 @@ int main(int argc, const char * argv[]) {
         
         shader.setVec3("lightPos", 10, 5, 5);
         shader.setVec3("lightColor", 1.0f,1.0f,1.0f);
+        shader.setVec3("ambientColor", glm::vec3(0.0f, 0.0f, 1.0f));
+        shader.setVec3("objectColor", glm::vec3(1.0f, 0.5f, 0.31f));
         
         //V矩阵 设置一次就行
         glm::mat4 viewMat = camera.GetViewMatrix();
@@ -146,8 +148,6 @@ int main(int argc, const char * argv[]) {
             glBindTexture(GL_TEXTURE_2D, textureB);
             shader.setInt("texture2", 1);
             
-            shader.setVec3("ambientColor", glm::vec3(1.0f, 1.0f, 1.0f));
-            shader.setVec3("objectColor", glm::vec3(1.0f, 1.0f, 1.0f));
             
             //画
             glDrawArrays(GL_TRIANGLES, 0, 36);
