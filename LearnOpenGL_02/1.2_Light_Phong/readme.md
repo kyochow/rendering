@@ -57,7 +57,7 @@ FragColor = vec4(result, 1.0);
 
 ##### One more thing
 
-在计算法线的时候，需要借助法线矩阵(Normal Matrix)来处理模型不等比缩放造成的问题
+在计算法线的时候，需要借助**法线矩阵**(Normal Matrix)来处理模型不等比缩放造成的问题
 
 ```
 Normal = mat3(transpose(inverse(model))) * aNormal;
@@ -74,6 +74,10 @@ Normal = mat3(transpose(inverse(model))) * aNormal;
 
 
 为了得到观察者的世界空间坐标，可以使用摄像机对象的位置坐标代替
+
+通过反射法向量周围光的方向来计算反射向量。然后我们计算反射向量和视线方向的角度差，如果夹角越小，那么镜面光的影响就会越大。它的作用效果就是，当我们去看光被物体所反射的那个方向的时候，我们会看到一个高光
+
+
 
 
 
