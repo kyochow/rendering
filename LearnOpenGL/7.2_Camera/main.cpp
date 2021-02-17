@@ -56,7 +56,7 @@ float vertices[] = {
     -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
 };
 
-Camera camera = Camera(glm::vec3(0,0,3.0f),0,180.0f,glm::vec3(0,1.0f,0));
+Camera camera(glm::vec3(0,0,3.0f));
 void processInput(GLFWwindow *window);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 
@@ -173,13 +173,13 @@ void processInput(GLFWwindow *window)
 {
     float cameraSpeed = 1.2f * deltaTime; // adjust accordingly
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        camera.Position += cameraSpeed * camera.Forward;
+        camera.Position += cameraSpeed * camera.Front;
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        camera.Position -= cameraSpeed * camera.Forward;
+        camera.Position -= cameraSpeed * camera.Front;
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        camera.Position -= glm::normalize(glm::cross(camera.Forward, camera.Up)) * cameraSpeed;
+        camera.Position -= glm::normalize(glm::cross(camera.Front, camera.Up)) * cameraSpeed;
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        camera.Position += glm::normalize(glm::cross(camera.Forward, camera.Up)) * cameraSpeed;
+        camera.Position += glm::normalize(glm::cross(camera.Front, camera.Up)) * cameraSpeed;
 }
 float lastX , lastY ;
 bool firstMouse = true;
@@ -201,5 +201,5 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
     xoffset *= sensitivity;
     yoffset *= sensitivity;
     
-    camera.ProcessMouseMovement(xoffset,yoffset);
+    camera.ProcessMouseMovement(xoffset,-yoffset);
 }

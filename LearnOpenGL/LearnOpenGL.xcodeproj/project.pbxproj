@@ -76,7 +76,6 @@
 		E40639D425DADC6F0037353A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E40639D325DADC6F0037353A /* main.cpp */; };
 		E40639DD25DADCB20037353A /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678A978125D031A1006321A0 /* Shader.cpp */; };
 		E40639DF25DADCBE0037353A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BFEEE925C8478600A11686 /* OpenGL.framework */; };
-		E40639E925DBEF890037353A /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E40639E725DBEF890037353A /* Camera.cpp */; };
 		E40639EE25DBF0270037353A /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; };
 		E40639EF25DBF0270037353A /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		E40639F125DBF0390037353A /* libGLEW.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4358D9625D835F100DF2184 /* libGLEW.2.2.dylib */; };
@@ -88,7 +87,6 @@
 		E4063A0325DC02D80037353A /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; };
 		E4063A0425DC02D80037353A /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		E4063A0525DC02F80037353A /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678A978125D031A1006321A0 /* Shader.cpp */; };
-		E4063A0625DC02F80037353A /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E40639E725DBEF890037353A /* Camera.cpp */; };
 		E4358D9E25D8368F00DF2184 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; };
 		E4358D9F25D8368F00DF2184 /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = E4358D9225D835BE00DF2184 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		E4358DA025D836A500DF2184 /* libGLEW.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4358D9625D835F100DF2184 /* libGLEW.2.2.dylib */; };
@@ -503,7 +501,6 @@
 		E40639D925DADC8C0037353A /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; };
 		E40639DA25DADC8C0037353A /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.shader; sourceTree = "<group>"; };
 		E40639DB25DADC8C0037353A /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		E40639E725DBEF890037353A /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		E40639E825DBEF890037353A /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		E40639F725DC02B20037353A /* 7.2_Camera */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 7.2_Camera; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40639F925DC02B20037353A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -727,7 +724,6 @@
 				678A978025D031A1006321A0 /* Shader.h */,
 				678A978125D031A1006321A0 /* Shader.cpp */,
 				678A97CA25D2366F006321A0 /* define.h */,
-				E40639E725DBEF890037353A /* Camera.cpp */,
 				E40639E825DBEF890037353A /* Camera.h */,
 			);
 			path = Common;
@@ -1388,7 +1384,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40639DD25DADCB20037353A /* Shader.cpp in Sources */,
-				E40639E925DBEF890037353A /* Camera.cpp in Sources */,
 				E40639D425DADC6F0037353A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1398,7 +1393,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4063A0525DC02F80037353A /* Shader.cpp in Sources */,
-				E4063A0625DC02F80037353A /* Camera.cpp in Sources */,
 				E40639FA25DC02B20037353A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
