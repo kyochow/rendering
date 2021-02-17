@@ -13,7 +13,6 @@
 class Shader
 {
 public:
-    Shader();
     Shader(const char* folderPath);
     Shader(const char* folderPath,const char* vertexName,const char* fragmentName);
     void genShader(const char* vertexPath,const char* fragmentPath);
@@ -25,6 +24,9 @@ public:
     void setFloat(const std::string &name, float value) const;
     void setVec4(const std::string &name, float f1,float f2,float f3,float f4) const;
     void setMat4(const std::string &name, glm::mat4 mat4)const;
+    
+    
+    
     unsigned int ID;
     
 private:

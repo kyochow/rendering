@@ -501,7 +501,7 @@
 		E40639D925DADC8C0037353A /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; };
 		E40639DA25DADC8C0037353A /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.shader; sourceTree = "<group>"; };
 		E40639DB25DADC8C0037353A /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		E40639E825DBEF890037353A /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		E40639E825DBEF890037353A /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
 		E40639F725DC02B20037353A /* 7.2_Camera */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 7.2_Camera; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40639F925DC02B20037353A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E4063A0725DC030E0037353A /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; };
@@ -724,7 +724,7 @@
 				678A978025D031A1006321A0 /* Shader.h */,
 				678A978125D031A1006321A0 /* Shader.cpp */,
 				678A97CA25D2366F006321A0 /* define.h */,
-				E40639E825DBEF890037353A /* Camera.h */,
+				E40639E825DBEF890037353A /* camera.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
