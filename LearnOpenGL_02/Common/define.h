@@ -104,11 +104,10 @@ void checkESC(GLFWwindow *window)
 }
 
 //加载一张贴图到GPU
-unsigned int loadImage(const char* imgPath,GLint internalFormat,GLenum format,int textureSlot){
+unsigned int loadImage(const char* imgPath,GLint internalFormat,GLenum format){
     //申请贴图 第一张
     unsigned int texBuffer;
     glGenTextures(1, &texBuffer);
-    glActiveTexture(GL_TEXTURE0 + textureSlot);
     glBindTexture(GL_TEXTURE_2D, texBuffer);//绑定
     
     char imgFullPath[1024];
