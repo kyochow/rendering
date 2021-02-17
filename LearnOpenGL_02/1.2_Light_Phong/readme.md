@@ -8,7 +8,7 @@
 - 漫反射(Diffuse)
 - 镜面反射(Specular)
 
-![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL_2/1.2_Light_Phong/basic_lighting_phong.png)
+![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL_02/1.2_Light_Phong/basic_lighting_phong.png)
 
 
 ### 环境光照
