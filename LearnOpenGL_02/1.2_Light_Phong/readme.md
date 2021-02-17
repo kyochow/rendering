@@ -39,7 +39,7 @@ vec3 norm = normalize(Normal);
 vec3 lightDir = normalize(lightPos - FragPos);
 ```
 
-第二步，计算漫反射标量，乘以光的颜色，就得到了漫反射颜色
+第二步，计算漫反射标量，乘以光的颜色，就得到了漫反射颜色 L dot N
 
 ```
 float diff = max(dot(norm, lightDir), 0.0);
@@ -65,7 +65,9 @@ Normal = mat3(transpose(inverse(model))) * aNormal;
 
 
 
-# 镜面光照
+# 镜面光照 Specular 
+
+常被叫做高光反射
 
 镜面光照也是依据光的方向向量和物体的法向量来决定的，但是它也依赖于观察方向
 

@@ -17,6 +17,10 @@ void processInput(GLFWwindow *window)
         camera.Position -= glm::normalize(glm::cross(camera.Front, camera.Up)) * cameraSpeed;
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         camera.Position += glm::normalize(glm::cross(camera.Front, camera.Up)) * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
+        camera.Position += glm::normalize(camera.Up) * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
+        camera.Position -= glm::normalize(camera.Up) * cameraSpeed;
 }
 
 //处理鼠标点击
