@@ -92,8 +92,7 @@ GLFWwindow* initGL(){
     glewExperimental = GL_TRUE;
     glewInit();
     
-    //设置image loader库上下反转图片
-    stbi_set_flip_vertically_on_load(true);
+    
     return win;
 }
 
@@ -115,6 +114,8 @@ unsigned int loadImage(const char* imgPath,GLint internalFormat,GLenum format,in
     char imgFullPath[1024];
     sprintf(imgFullPath, "%s%s", PROJECT_ROOT,imgPath);
     int width, height, nrChannels;
+    //设置image loader库上下反转图片
+    stbi_set_flip_vertically_on_load(true);
     unsigned char *data = stbi_load(imgFullPath, &width, &height, &nrChannels, 0);
     if (data)
     {

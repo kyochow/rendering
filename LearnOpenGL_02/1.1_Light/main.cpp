@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
     glfwSetCursorPosCallback(win, mouse_callback);
     glViewport(0, 0, 800, 600);
     
-    Shader shader ("1.1_Light/");
+    Shader shader = Shader("1.1_Light/");
     
     unsigned int VAO;
     glGenVertexArrays(1,&VAO);
@@ -39,6 +39,7 @@ int main(int argc, const char * argv[]) {
     glEnableVertexAttribArray(1);
     
     unsigned int textureA = loadImage("Arts/container.jpg",GL_RGB,GL_RGB,0);
+    unsigned int textureB = loadImage("Arts/awesomeface.png",GL_RGBA,GL_RGBA,1);
     
     // 为当前绑定的纹理对象设置环绕、过滤方式
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
@@ -70,8 +71,8 @@ int main(int argc, const char * argv[]) {
         
         glBindVertexArray(VAO);
         shader.use();
-        //多张贴图，需要先激活指定位置
-        glBindTexture(GL_TEXTURE_2D, textureA);
+        shader.setInt("texture1", 0);
+        shader.setInt("texture2", 1);
         
         for(unsigned int i = 0; i < 10; i++)
         {
