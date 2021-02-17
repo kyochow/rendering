@@ -116,9 +116,13 @@ int main(int argc, const char * argv[]) {
         
         shader.use();
         
+        shader.setVec3("lightPos", 10, 5, 5);
+        shader.setVec3("lightColor", 1.0f,1.0f,1.0f);
+        
         //V矩阵 设置一次就行
         glm::mat4 viewMat = camera.GetViewMatrix();
         shader.setMat4("viewMat",viewMat);
+        
         
         for(unsigned int i = 0; i < 10; i++)
         {
