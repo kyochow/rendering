@@ -58,6 +58,7 @@
 		E4063A0725DC030E0037353A /* fragment.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.shader; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
 		E4063A0825DC030E0037353A /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		E4063A0925DC030E0037353A /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.shader; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+		E4063A0A25DCCADB0037353A /* inputs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = inputs.h; sourceTree = "<group>"; };
 		E4358D9225D835BE00DF2184 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../glfw/3.3.2/lib/libglfw.3.dylib; sourceTree = "<group>"; };
 		E4358D9625D835F100DF2184 /* libGLEW.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.dylib; path = ../glew/2.2.0_1/lib/libGLEW.2.2.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +84,7 @@
 				678A978025D031A1006321A0 /* shader.h */,
 				678A97CA25D2366F006321A0 /* define.h */,
 				E40639E825DBEF890037353A /* camera.h */,
+				E4063A0A25DCCADB0037353A /* inputs.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
