@@ -14,8 +14,7 @@
 #include <sstream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-
-const char* PROJ_ROOT ="/Users/yons/Documents/github/rendering/LearnOpenGL/";
+#include "define.h"
 
 class Shader
 {
@@ -25,18 +24,18 @@ public:
         const char* vertexName = "vertex.shader";
         const char* fragmentName = "fragment.shader";
         char vertexFullPath[1024];
-        sprintf(vertexFullPath, "%s%s%s", PROJ_ROOT,folderPath,vertexName);
+        sprintf(vertexFullPath, "%s%s%s", PROJECT_ROOT,folderPath,vertexName);
         char fragmentFullPath[1024];
-        sprintf(fragmentFullPath, "%s%s%s", PROJ_ROOT,folderPath,fragmentName);
+        sprintf(fragmentFullPath, "%s%s%s", PROJECT_ROOT,folderPath,fragmentName);
         genShader(vertexFullPath,fragmentFullPath);
     }
 
     Shader(const char* folderPath,const char* vertexName,const char* fragmentName)
     {
         char vertexFullPath[1024];
-        sprintf(vertexFullPath, "%s%s%s", PROJ_ROOT,folderPath,vertexName);
+        sprintf(vertexFullPath, "%s%s%s", PROJECT_ROOT,folderPath,vertexName);
         char fragmentFullPath[1024];
-        sprintf(fragmentFullPath, "%s%s%s", PROJ_ROOT,folderPath,fragmentName);
+        sprintf(fragmentFullPath, "%s%s%s", PROJECT_ROOT,folderPath,fragmentName);
         genShader(vertexFullPath,fragmentFullPath);
     }
 
