@@ -64,7 +64,7 @@ int main(int argc, const char * argv[]) {
     glfwSetCursorPosCallback(win, mouse_callback);
     glViewport(0, 0, 800, 600);
     
-    Shader shader = Shader("1.2_Light_Phong/");
+    Shader shader = Shader("2.1_Material/");
     
     unsigned int VAO;
     glGenVertexArrays(1,&VAO);
@@ -138,6 +138,10 @@ int main(int argc, const char * argv[]) {
             shader.setMat4("modelMat",modelMat);
             shader.setMat4("projMat",projMat);
             
+            shader.setVec3("material.ambient",1.0f,1.0f,1.0f);
+            shader.setVec3("material.diffuse",1.0f,1.0f,1.0f);
+            shader.setVec3("material.specular",1.0f,1.0f,1.0f);
+            shader.setFloat("material.shininess",32.0f);
             //绑定VAO
             glBindVertexArray(VAO);
             

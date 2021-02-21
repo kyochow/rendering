@@ -111,3 +111,18 @@ vec3 specular = specularStrength * spec * lightColor;
 
 ![Image text](https://raw.githubusercontent.com/kyochow/rendering/main/LearnOpenGL_02/1.2_Light_Phong/basic_lighting_specular_shininess.png)
 
+
+
+## 最后需要强调的一件事
+
+如果模型矩阵执行了不等比缩放，顶点的改变会导致法向量不再垂直于表面
+
+修复这个行为的诀窍是使用一个为法向量专门定制的模型矩阵。这个矩阵称之为法线矩阵(Normal Matrix)
+
+mat3(transpose(inverse(model)));
+
+对模型矩阵，先求逆矩阵，再求转置矩阵 就得到了**法线矩阵**
+
+
+
+最终 ： Normal = mat3(transpose(inverse(model))) * aNormal;

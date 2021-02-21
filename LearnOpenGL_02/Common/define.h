@@ -1,7 +1,7 @@
 #ifndef define_h
 #define define_h
 
-const char* PROJECT_ROOT ="/Users/zhongliang.zhou/Documents/github/rendering/LearnOpenGL_02/";
+const char* PROJECT_ROOT ="/Users/yons/Documents/github/rendering/LearnOpenGL_02/";
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
